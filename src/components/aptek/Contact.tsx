@@ -34,7 +34,7 @@ export default function Contact() {
     } catch {
       // Fallback to WhatsApp
       const waMessage = encodeURIComponent(
-        `Hi APTEK, I'm ${name}. Phone: ${phone}. Service: ${service}. Message: ${message}`
+        `Hi APTEK MEDIA, I'm ${name}. Phone: ${phone}. Service: ${service}. Message: ${message}`
       );
       window.open(`https://wa.me/919999999999?text=${waMessage}`, '_blank');
     } finally {
@@ -49,7 +49,7 @@ export default function Contact() {
 
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-amber-500/3 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#00A651]/3 rounded-full blur-[150px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
+            className="inline-block text-[#00A651] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
           >
             Get In Touch
           </motion.span>
@@ -70,7 +70,7 @@ export default function Contact() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white"
           >
             Let&apos;s Build Your{' '}
-            <span className="text-gradient-gold">Brand</span>
+            <span className="text-gradient-brand">Brand</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -102,8 +102,8 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/10 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#00A651]/10 flex items-center justify-center">
+                    <svg className="w-8 h-8 text-[#00A651]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -174,7 +174,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-amber-500 hover:bg-amber-400 disabled:bg-amber-500/50 text-black font-bold text-sm rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#00A651] hover:bg-[#00C462] disabled:bg-[#00A651]/50 text-white font-bold text-sm rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#00A651]/20"
                     >
                       {isSubmitting ? (
                         <>
@@ -192,7 +192,7 @@ export default function Contact() {
                       )}
                     </button>
                     <a
-                      href="https://wa.me/919999999999?text=Hi%20APTEK%2C%20I%20want%20to%20inquire%20about%20your%20advertising%20services."
+                      href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20to%20inquire%20about%20your%20advertising%20services."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-green-500/30 hover:border-green-500/60 text-green-400 font-semibold text-sm rounded-xl transition-all duration-300 hover:bg-green-500/5"
@@ -218,13 +218,13 @@ export default function Contact() {
             {/* Contact Cards */}
             <div className="rounded-2xl p-5 md:p-6 bg-[#141418] border border-white/5 space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-amber-500" />
+                <div className="w-10 h-10 rounded-lg bg-[#00A651]/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-[#00A651]" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold text-sm mb-1">Office Address</h4>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    APTEK Advertising<br />
+                    APTEK Media<br />
                     Main Road, City Center<br />
                     India
                   </p>
@@ -232,32 +232,32 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-amber-500" />
+                <div className="w-10 h-10 rounded-lg bg-[#00A651]/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#00A651]" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold text-sm mb-1">Phone</h4>
-                  <a href="tel:+919999999999" className="text-gray-400 text-sm hover:text-amber-400 transition-colors">
+                  <a href="tel:+919999999999" className="text-gray-400 text-sm hover:text-[#00A651] transition-colors">
                     +91 99999 99999
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-amber-500" />
+                <div className="w-10 h-10 rounded-lg bg-[#00A651]/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#00A651]" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold text-sm mb-1">Email</h4>
-                  <a href="mailto:info@aptek.in" className="text-gray-400 text-sm hover:text-amber-400 transition-colors">
-                    info@aptek.in
+                  <a href="mailto:info@aptekmedia.in" className="text-gray-400 text-sm hover:text-[#00A651] transition-colors">
+                    info@aptekmedia.in
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-5 h-5 text-amber-500" />
+                <div className="w-10 h-10 rounded-lg bg-[#00A651]/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-[#00A651]" />
                 </div>
                 <div>
                   <h4 className="text-white font-semibold text-sm mb-1">Working Hours</h4>
@@ -276,14 +276,14 @@ export default function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="APTEK Office Location"
+                title="APTEK Media Office Location"
                 className="grayscale hover:grayscale-0 transition-all duration-500"
               />
             </div>
 
             {/* Quick WhatsApp CTA */}
             <a
-              href="https://wa.me/919999999999?text=Hi%20APTEK%2C%20I%20need%20a%20quick%20quote%20for%20advertising."
+              href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20need%20a%20quick%20quote%20for%20advertising."
               target="_blank"
               rel="noopener noreferrer"
               className="block rounded-2xl p-5 md:p-6 bg-gradient-to-r from-green-600/20 to-green-500/10 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 group"
