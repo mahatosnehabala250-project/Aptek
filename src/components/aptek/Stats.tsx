@@ -61,7 +61,7 @@ export default function Stats() {
     <section className="relative py-16 md:py-20 border-y border-white/5 bg-[#0B0B0F]">
       {/* Subtle glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[200px] bg-amber-500/5 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[200px] bg-[#00A651]/5 rounded-full blur-[100px]" />
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -49,7 +49,7 @@ export default function Clients() {
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
+            className="inline-block text-[#00A651] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
           >
             Our Clients
           </motion.span>
@@ -60,7 +60,7 @@ export default function Clients() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white"
           >
             Brands That{' '}
-            <span className="text-gradient-gold">Trust Us</span>
+            <span className="text-gradient-brand">Trust Us</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -81,15 +81,15 @@ export default function Clients() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="group relative rounded-2xl p-6 md:p-8 bg-[#141418] border border-white/5 hover:border-amber-500/20 transition-all duration-500 text-center overflow-hidden"
+              className="group relative rounded-2xl p-6 md:p-8 bg-[#141418] border border-white/5 hover:border-[#00A651]/20 transition-all duration-500 text-center overflow-hidden"
             >
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#00A651]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
                 {/* Logo placeholder */}
-                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-5 rounded-2xl bg-amber-500/10 flex items-center justify-center border border-amber-500/10 group-hover:border-amber-500/30 transition-colors duration-500">
-                  <span className="text-2xl md:text-3xl font-black text-amber-500 tracking-tight">
+                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-5 rounded-2xl bg-[#00A651]/10 flex items-center justify-center border border-[#00A651]/10 group-hover:border-[#00A651]/30 transition-colors duration-500">
+                  <span className="text-2xl md:text-3xl font-black text-[#00A651] tracking-tight">
                     {client.abbr}
                   </span>
                 </div>
@@ -112,7 +112,7 @@ export default function Clients() {
             transition={{ duration: 0.6 }}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-white"
           >
-            Why Choose <span className="text-gradient-gold">APTEK</span>?
+            Why Choose <span className="text-gradient-brand">APTEK MEDIA</span>?
           </motion.h3>
         </div>
 
@@ -125,8 +125,8 @@ export default function Clients() {
               transition={{ duration: 0.5, delay: 0.1 * i + 0.3 }}
               className="text-center p-5 md:p-6 rounded-xl bg-[#141418]/50"
             >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-500/10 flex items-center justify-center">
-                <item.icon className="w-6 h-6 text-amber-500" />
+              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#00A651]/10 flex items-center justify-center">
+                <item.icon className="w-6 h-6 text-[#00A651]" />
               </div>
               <h4 className="text-white font-bold text-base md:text-lg mb-2">{item.title}</h4>
               <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>

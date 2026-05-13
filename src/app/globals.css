@@ -42,16 +42,12 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --color-amber-50: #fffbeb;
-  --color-amber-100: #fef3c7;
-  --color-amber-200: #fde68a;
-  --color-amber-300: #fcd34d;
-  --color-amber-400: #fbbf24;
-  --color-amber-500: #f59e0b;
-  --color-amber-600: #d97706;
-  --color-amber-700: #b45309;
-  --color-amber-800: #92400e;
-  --color-amber-900: #78350f;
+  /* APTEK MEDIA Brand Colors from V Card */
+  --color-brand-green: #00A651;
+  --color-brand-green-light: #00C462;
+  --color-brand-green-dark: #008C45;
+  --color-brand-navy: #1A365D;
+  --color-brand-green-accent: #8BC34A;
 
   --color-dark-bg: #0B0B0F;
   --color-dark-surface: #141418;
@@ -139,7 +135,7 @@
   }
 }
 
-/* APTEK Custom Styles */
+/* APTEK MEDIA Custom Styles */
 html {
   scroll-behavior: smooth;
 }
@@ -178,23 +174,23 @@ body {
   );
 }
 
-/* Gold gradient text */
-.text-gradient-gold {
-  background: linear-gradient(135deg, #F59E0B, #FBBF24, #D97706);
+/* Brand Green gradient text */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #00A651, #00C462, #8BC34A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Amber glow effect */
-.glow-amber {
-  box-shadow: 0 0 30px rgba(245, 158, 11, 0.15), 0 0 60px rgba(245, 158, 11, 0.05);
+/* Brand glow effect */
+.glow-brand {
+  box-shadow: 0 0 30px rgba(0, 166, 81, 0.15), 0 0 60px rgba(0, 166, 81, 0.05);
 }
 
-/* Section divider */
+/* Section divider with brand green */
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 166, 81, 0.3), transparent);
 }
 
 /* Gallery image hover */
@@ -244,16 +240,16 @@ body {
   animation: whatsapp-pulse 2s infinite;
 }
 
-/* Service card hover */
+/* Service card hover with brand green */
 .service-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .service-card:hover {
-  border-color: rgba(245, 158, 11, 0.3);
+  border-color: rgba(0, 166, 81, 0.3);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(245, 158, 11, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 166, 81, 0.05);
 }
 
 /* Stats counter animation */
@@ -306,11 +302,19 @@ body {
 
 .form-input-aptek:focus {
   outline: none;
-  border-color: #F59E0B;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+  border-color: #00A651;
+  box-shadow: 0 0 0 3px rgba(0, 166, 81, 0.1);
   background: rgba(255, 255, 255, 0.08);
 }
 
 .form-input-aptek::placeholder {
   color: #6B7280;
+}
+
+/* Navy accent for secondary elements */
+.text-gradient-navy {
+  background: linear-gradient(135deg, #1A365D, #2C5282);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

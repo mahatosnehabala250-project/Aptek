@@ -61,7 +61,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block text-amber-500 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
+            className="inline-block text-[#00A651] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
           >
             What We Offer
           </motion.span>
@@ -71,7 +71,7 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white"
           >
-            Our <span className="text-gradient-gold">Services</span>
+            Our <span className="text-gradient-brand">Services</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -97,8 +97,8 @@ export default function Services() {
               }`}
             >
               {/* Icon */}
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-amber-500/10 flex items-center justify-center mb-5 md:mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
-                <service.icon className="w-6 h-6 md:w-7 md:h-7 text-amber-500" />
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#00A651]/10 flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/20 transition-colors duration-300">
+                <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#00A651]" />
               </div>
 
               {/* Title */}
@@ -116,7 +116,7 @@ export default function Services() {
                 {service.features.map((feature) => (
                   <span
                     key={feature}
-                    className="px-3 py-1 text-xs font-medium text-amber-400/80 bg-amber-500/8 rounded-full border border-amber-500/10"
+                    className="px-3 py-1 text-xs font-medium text-[#00A651]/80 bg-[#00A651]/8 rounded-full border border-[#00A651]/10"
                   >
                     {feature}
                   </span>

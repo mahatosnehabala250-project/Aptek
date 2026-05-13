@@ -14,11 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "APTEK | Outdoor Advertising & Branding Solutions",
+  title: "APTEK MEDIA | A Complete AD Publicity - Outdoor Advertising & Branding Solutions",
   description:
-    "APTEK is a premier outdoor advertising and branding company specializing in hoardings, flex printing, banner branding, and promotional advertising. Transform your brand visibility with India's trusted advertising partner.",
+    "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising and branding company specializing in hoardings, flex printing, banner branding, and promotional advertising across India.",
   keywords: [
+    "APTEK Media",
     "APTEK",
+    "A Complete AD Publicity",
     "outdoor advertising",
     "hoardings",
     "billboards",
@@ -30,23 +32,24 @@ export const metadata: Metadata = {
     "commercial advertising",
     "DPS hoardings",
     "PNB advertising",
+    "Shyam Steel advertising",
   ],
-  authors: [{ name: "APTEK Advertising" }],
+  authors: [{ name: "APTEK Media" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "APTEK | Outdoor Advertising & Branding Solutions",
+    title: "APTEK MEDIA | A Complete AD Publicity",
     description:
-      "Premier outdoor advertising and branding company. Hoardings, flex printing, banner branding & more.",
+      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising, hoardings, flex printing, banner branding & more.",
     type: "website",
-    siteName: "APTEK",
+    siteName: "APTEK MEDIA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "APTEK | Outdoor Advertising & Branding Solutions",
+    title: "APTEK MEDIA | A Complete AD Publicity",
     description:
-      "Premier outdoor advertising and branding company. Hoardings, flex printing, banner branding & more.",
+      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising & branding company.",
   },
 };
 
