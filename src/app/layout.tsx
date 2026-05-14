@@ -70,7 +70,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ backgroundColor: "#0B0B0F", color: "#FFFFFF" }}
+        style={{ backgroundColor: "#FFFFFF", color: "#1A1A2E" }}
       >
         {children}
         <Toaster />

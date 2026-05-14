@@ -43,10 +43,10 @@ function AnimatedCounter({ stat, isInView }: { stat: StatItem; isInView: boolean
 
   return (
     <div className="text-center">
-      <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2">
+      <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#00A651] mb-2">
         {stat.prefix}{count}{stat.suffix}
       </div>
-      <div className="text-sm sm:text-base text-gray-400 font-medium uppercase tracking-wider">
+      <div className="text-sm sm:text-base text-gray-500 font-medium uppercase tracking-wider">
         {stat.label}
       </div>
     </div>
@@ -58,13 +58,8 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="relative py-16 md:py-20 border-y border-white/5 bg-[#0B0B0F]">
-      {/* Subtle glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[200px] bg-[#00A651]/5 rounded-full blur-[100px]" />
-      </div>
-
-      <div ref={ref} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-16 md:py-20 bg-[#F8FAFC] border-y border-gray-100">
+      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, i) => (
             <motion.div

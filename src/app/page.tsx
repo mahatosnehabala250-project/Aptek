@@ -12,7 +12,7 @@ import WhatsAppButton from '@/components/aptek/WhatsAppButton';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0B0B0F' }}>
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-1">
         <Hero />

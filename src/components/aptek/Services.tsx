@@ -53,7 +53,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="services" className="relative py-20 md:py-28 bg-[#0B0B0F]">
+    <section id="services" className="relative py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14 md:mb-20">
@@ -69,7 +69,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900"
           >
             Our <span className="text-gradient-brand">Services</span>
           </motion.h2>
@@ -77,7 +77,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 md:mt-6 text-gray-400 text-base md:text-lg max-w-2xl mx-auto"
+            className="mt-4 md:mt-6 text-gray-500 text-base md:text-lg max-w-2xl mx-auto"
           >
             Comprehensive outdoor advertising solutions designed to make your brand
             the center of attention everywhere.
@@ -92,22 +92,22 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className={`service-card rounded-2xl p-6 md:p-8 bg-[#141418] group ${
+              className={`service-card rounded-2xl p-6 md:p-8 bg-white group ${
                 i === 4 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
               {/* Icon */}
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#00A651]/10 flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/20 transition-colors duration-300">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/10 transition-colors duration-300">
                 <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#00A651]" />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-5">
+              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-5">
                 {service.description}
               </p>
 
@@ -116,7 +116,7 @@ export default function Services() {
                 {service.features.map((feature) => (
                   <span
                     key={feature}
-                    className="px-3 py-1 text-xs font-medium text-[#00A651]/80 bg-[#00A651]/8 rounded-full border border-[#00A651]/10"
+                    className="px-3 py-1 text-xs font-medium text-[#008C45] bg-[#F0FDF4] rounded-full"
                   >
                     {feature}
                   </span>
