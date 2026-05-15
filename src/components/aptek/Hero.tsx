@@ -109,33 +109,35 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-12 md:mt-16 flex flex-col items-center gap-3"
         >
-          <span
-            className="text-xs text-white/70 uppercase tracking-[0.2em] font-medium"
-            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.4)' }}
-          >
-            Trusted by leading brands
-          </span>
-          <div className="flex items-center gap-6 md:gap-10">
+          <div className="inline-flex flex-col items-center gap-3 px-8 py-5 rounded-2xl bg-black/30 backdrop-blur-sm">
             <span
-              className="text-white/80 font-bold text-sm md:text-base tracking-wider"
-              style={{ textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}
+              className="text-xs text-white/90 uppercase tracking-[0.2em] font-bold"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}
             >
-              DPS
+              Trusted by leading brands
             </span>
-            <span className="text-white/40">|</span>
-            <span
-              className="text-white/80 font-bold text-sm md:text-base tracking-wider"
-              style={{ textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}
-            >
-              PNB
-            </span>
-            <span className="text-white/40">|</span>
-            <span
-              className="text-white/80 font-bold text-sm md:text-base tracking-wider"
-              style={{ textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}
-            >
-              SHYAM STEEL
-            </span>
+            <div className="flex items-center gap-6 md:gap-10">
+              <span
+                className="text-white font-extrabold text-base md:text-lg tracking-wider"
+                style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
+              >
+                DPS
+              </span>
+              <span className="text-white/50 font-light">|</span>
+              <span
+                className="text-white font-extrabold text-base md:text-lg tracking-wider"
+                style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
+              >
+                PNB
+              </span>
+              <span className="text-white/50 font-light">|</span>
+              <span
+                className="text-white font-extrabold text-base md:text-lg tracking-wider"
+                style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
+              >
+                SHYAM STEEL
+              </span>
+            </div>
           </div>
         </motion.div>
       </div>
