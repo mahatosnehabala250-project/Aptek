@@ -91,7 +91,6 @@ export default function Contact() {
                     <option value="Outdoor Advertising">Outdoor Advertising</option>
                     <option value="Flex Printing">Flex Printing</option>
                     <option value="Banner Advertising">Banner Advertising</option>
-                    <option value="Promotional Advertising">Promotional Advertising</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>

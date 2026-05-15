@@ -10,7 +10,6 @@ const footerLinks = {
     { label: 'Outdoor Advertising', href: '#services' },
     { label: 'Flex Printing', href: '#services' },
     { label: 'Banner Advertising', href: '#services' },
-    { label: 'Promotional Advertising', href: '#services' },
   ],
   company: [
     { label: 'About APTEK Media', href: '#clients' },

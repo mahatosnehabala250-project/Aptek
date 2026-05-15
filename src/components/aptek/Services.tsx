@@ -7,7 +7,6 @@ import {
   Printer,
   PanelTop,
   Image,
-  TrendingUp,
   ArrowRight,
 } from 'lucide-react';
 
@@ -39,13 +38,6 @@ const services = [
     description:
       'Eye-catching banner designs and installations for events, retail spaces, exhibitions, and promotional campaigns.',
     features: ['Event Banners', 'Retail Displays', 'Exhibition Displays', 'Roll-up Banners'],
-  },
-  {
-    icon: TrendingUp,
-    title: 'Promotional Advertising',
-    description:
-      'End-to-end promotional campaign execution including event setups, vehicle wraps, product launches, and experiential marketing.',
-    features: ['Event Setup', 'Vehicle Wraps', 'Product Launches', 'Campaign Activation'],
   },
 ];
 
@@ -98,9 +90,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.06 * i }}
-              className={`service-card rounded-2xl p-6 md:p-8 bg-white group relative overflow-hidden shadow-sm group-hover:shadow-xl group-hover:shadow-[#00A651]/5 border border-gray-100/80 transition-all duration-300 group-hover:-translate-y-1 ${
-                i === 4 ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
+              className="service-card rounded-2xl p-6 md:p-8 bg-white group relative overflow-hidden shadow-sm group-hover:shadow-xl group-hover:shadow-[#00A651]/5 border border-gray-100/80 transition-all duration-300 group-hover:-translate-y-1"
             >
               {/* Border top accent — 3px green gradient */}
               <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#00A651] to-[#8BC34A] rounded-t-2xl" />
