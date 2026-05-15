@@ -6,21 +6,21 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image — Premium cinematic treatment */}
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.jpg"
           alt="APTEK MEDIA Outdoor Advertising"
-          className="w-full h-full object-cover scale-105"
-          style={{ filter: 'blur(2px) brightness(0.7)' }}
+          className="w-full h-full object-cover scale-110"
+          style={{ filter: 'blur(4px) brightness(0.65) saturate(1.2)' }}
           fetchPriority="high"
         />
-        {/* Clean dark overlay — lets image texture show but keeps text area clean */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Gradient overlay — darkens bottom for text, keeps top lighter for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-black/65" />
         {/* Vignette for cinematic depth */}
         <div
           className="absolute inset-0"
-          style={{ boxShadow: 'inset 0 0 200px 60px rgba(0,0,0,0.5)' }}
+          style={{ boxShadow: 'inset 0 0 250px 80px rgba(0,0,0,0.6)' }}
         />
       </div>
 
