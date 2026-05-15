@@ -9,6 +9,7 @@ import Testimonials from '@/components/aptek/Testimonials';
 import Clients from '@/components/aptek/Clients';
 import Process from '@/components/aptek/Process';
 import FAQ from '@/components/aptek/FAQ';
+import CTABanner from '@/components/aptek/CTABanner';
 import Contact from '@/components/aptek/Contact';
 import Footer from '@/components/aptek/Footer';
 import WhatsAppButton from '@/components/aptek/WhatsAppButton';
@@ -31,6 +32,7 @@ export default function Home() {
         <Clients />
         <Process />
         <FAQ />
+        <CTABanner />
         <Contact />
       </main>
       <Footer />

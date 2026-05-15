@@ -421,3 +421,178 @@ Stage Summary:
 - WhatsApp Us button visibility enhanced
 - VLM hero score improved from 7/10 → 8/10
 - 0 errors, website stable
+
+---
+Task ID: 9
+Agent: Main Agent
+Task: Phase 3 QA, bug fixes, new features, and comprehensive styling enhancements
+
+Work Log:
+- Reviewed worklog.md and assessed full project history (8 previous task phases)
+- Ran comprehensive QA using agent-browser on desktop (1440x900) and mobile (390x844)
+- Captured screenshots of all 11+ sections for VLM visual analysis
+- Tested all interactive elements: FAQ accordion, portfolio filter, lightbox modal, contact form, navigation
+- Checked for JS errors (0 found), ran ESLint (0 errors)
+
+**Bugs Fixed:**
+1. CRITICAL: Process.tsx "How We Work" section invisible on desktop
+   - Root cause: `useRef` was placed on BOTH the desktop-only and mobile-only divs. React only assigns ref to the last element (mobile div). On desktop, mobile div is hidden (display:none), so `useInView` never triggers → all elements stay at `opacity: 0`
+   - Fix: Moved ref to the parent `<section>` element (always visible), renamed to `sectionRef`
+   - Verified: Section now fully visible on both desktop and mobile
+
+2. Hero animation timing too slow
+   - User reported "TEXT POP UP THORA LATE HO RAHA HE"
+   - Reduced all animation delays by ~50%:
+     - Badge: 0.2s → 0.1s
+     - Heading: 0.4s → 0.2s
+     - Subtitle: 0.6s → 0.35s
+     - Buttons: 0.8s → 0.5s
+     - Trusted By: 1.2s → 0.65s
+     - Scroll Indicator: 1.5s → 0.8s
+
+3. Hero header image replaced with user's new photograph
+   - User provided new photo (2752x1536, 3.2MB)
+   - Optimized to 2400px width using sharp-cli (3.2MB → 490KB)
+   - VLM QA: 8/10 overall (visual comfort 7, professionalism 8, readability 9, CTA 9)
+
+**New Features & Components:**
+1. CTABanner component (NEW):
+   - Full-width green gradient CTA section (#00A651 → #006B34)
+   - Heading: "Let's Make Your Brand Unmissable"
+   - Two CTA buttons: "Get Free Quote" (WhatsApp) + "Call Now" (tel link)
+   - Decorative circles for visual depth
+   - Framer Motion staggered entrance animations
+   - Placed between FAQ and Contact sections
+   - VLM rated 10/10
+
+2. Stats section enhancements:
+   - Added "Our Impact" green label above stats
+   - Each stat wrapped in a card with icon (Briefcase, Users, MapPin, Award)
+   - requestAnimationFrame-based counter with easeOutCubic easing
+   - Staggered scale animation (0.95 → 1)
+   - Mobile separator lines between stats
+   - VLM rated 8/10
+
+3. Services section enhancements:
+   - Large decorative numbers (01-05) on each card (text-gray-100/50)
+   - 3px green gradient top border accent on cards
+   - Icon hover: scale-110 + bounce animation
+   - "Explore Service →" always-visible link (replaced hover-only "Learn more")
+   - Card hover lift: -translate-y-1
+   - Responsive description text sizing
+   - VLM rated 9/10
+
+4. Portfolio section enhancements:
+   - Filter count badges (e.g., "Outdoor (3)")
+   - Disabled/struck-through empty categories
+   - "Showing X of Y projects" indicator
+   - Image zoom on hover (scale-105)
+   - Keyboard navigation in lightbox (ArrowLeft/Right, Escape)
+   - WhatsApp inquiry button in lightbox
+   - Empty state with "View All Projects" button
+   - Body scroll lock when lightbox open
+
+5. Testimonials section enhancements:
+   - Green gradient accent bar at top of each card
+   - Avatar: w-12 h-12 with green ring border (ring-2 ring-[#00A651]/20)
+   - "Swipe to explore →" indicator on mobile (with bounce animation)
+   - Active card highlight (green border + elevated shadow)
+   - Star rating: bigger on desktop (md:w-5 md:h-5) with golden glow
+   - Quote text: left border accent (border-l-2 border-[#00A651]/20)
+
+**QA Verification:**
+- All 11 sections render correctly (Hero, Stats, Services, Portfolio, Testimonials, Clients, Process, FAQ, CTABanner, Contact, Footer)
+- FAQ accordion: aria-expanded toggles correctly ✅
+- Portfolio filter: correctly filters by category ✅
+- Portfolio lightbox: opens, closes, navigates ✅
+- Process section: visible on both desktop and mobile ✅
+- Contact form: all fields accessible, submit button present ✅
+- Navigation: all links functional ✅
+- ESLint: 0 errors
+- Dev server: 200 OK, all compilations successful
+- VLM section scores: Stats 8/10, Services 9/10, CTA Banner 10/10, Testimonials 8/10 (mobile)
+
+Stage Summary:
+- 1 critical visibility bug fixed (Process section)
+- Hero animation speed improved ~50%
+- Hero image replaced with user's new photograph
+- 1 new component added (CTABanner) — total: 16 components
+- 5 existing components enhanced (Stats, Services, Portfolio, Testimonials, Hero)
+- New features: keyboard lightbox nav, filter count badges, empty states, eased counters
+- 0 lint errors, 0 build errors, 200 OK on all routes
+
+================================================================================
+HANDOVER DOCUMENT — APTEK MEDIA WEBSITE (PHASE 3)
+================================================================================
+
+## 1. CURRENT PROJECT STATUS
+
+**Status:** STABLE — Production-ready, all features working, 0 errors. Phase 3 complete.
+
+**Tech Stack:**
+- Next.js 16 (App Router) + TypeScript 5
+- Tailwind CSS 4 + shadcn/ui
+- Framer Motion (scroll animations, page transitions)
+- Prisma ORM + SQLite (inquiry form backend)
+- Images: 1 real hero photo + 7 AI-generated portfolio images
+
+**Brand Identity:**
+- Company: APTEK MEDIA
+- Tagline: "A Complete AD Publicity"
+- Primary: #00A651 (Green), Secondary: #1A365D (Navy), Accent: #8BC34A (Light Green)
+
+**Sections (16 components total, in order):**
+1. PageLoader — Splash screen with animated logo + loading bar
+2. ScrollProgress — Green gradient progress bar at top of page
+3. Navbar — Sticky, glass-blur, mobile hamburger, green CTA
+4. Hero — Full-screen, static bg image, dark overlay, fast animations, dual CTAs
+5. Stats — Card-style counters with icons, eased animation, "Our Impact" label
+6. Services — 5 cards with numbers (01-05), green top border, explore links, hover lift
+7. Portfolio — 7 images, count-badge filters, keyboard lightbox, hover zoom, empty state
+8. Testimonials — 6 cards, auto-scroll carousel, green top accent, swipe indicator
+9. Clients — DPS, PNB, Shyam Steel showcase + "Why Choose Us" section
+10. Process — 4-step "How We Work" timeline (horizontal/vertical responsive)
+11. FAQ — 6 expandable accordion items
+12. CTABanner — Green gradient CTA with "Get Free Quote" + "Call Now" buttons
+13. Contact — Inquiry form + Google Maps + WhatsApp CTA + business info
+14. Footer — Links, social media icons, contact info, gradient border, scroll-to-top
+15. WhatsApp Float — Pulsing green button with tooltip
+16. FloatingCTA — Slide-up quote bar after scrolling past hero
+
+## 2. COMPLETED GOALS & VERIFICATION
+
+| Goal | Status | Verified |
+|------|--------|----------|
+| Process section visibility bug fix | Done | agent-browser + VLM |
+| Hero animation speed improvement | Done | User confirmed |
+| Hero image replacement | Done | VLM 8/10 |
+| CTABanner new component | Done | VLM 10/10 |
+| Stats card enhancement | Done | VLM 8/10 |
+| Services card enhancement | Done | VLM 9/10 |
+| Portfolio filter + lightbox enhancement | Done | Interactive test |
+| Testimonials card enhancement | Done | VLM 8/10 mobile |
+| All sections rendering | Done | Full-page screenshot |
+| All interactive elements working | Done | agent-browser test |
+| ESLint clean | Done | 0 errors |
+| Dev server stable | Done | 200 OK |
+
+## 3. UNRESOLVED ISSUES & NEXT PHASE PRIORITIES
+
+**Minor (Low Priority):**
+1. WhatsApp phone number is placeholder (919999999999) — needs real number
+2. Google Maps embed uses generic coordinates — needs actual office location
+3. Email (info@aptekmedia.in) is placeholder — needs real email
+4. Office address "Main Road, City Center, India" is generic — needs real address
+5. Portfolio images are AI-generated — should be replaced with real project photos
+6. Client logos are text-based (DPS, PNB, SHYAM STEEL) — should use actual logo files
+7. Social media links point to placeholder URLs
+
+**Recommended Next Phase Priorities:**
+1. HIGH — Replace placeholder contact info with real data (phone, email, address, maps)
+2. HIGH — Add real client logos instead of text abbreviations
+3. MEDIUM — Replace AI-generated portfolio images with real project photos
+4. MEDIUM — Add video/showreel section for hero
+5. LOW — Add blog/news section for SEO
+6. LOW — Add dark mode toggle
+7. LOW — Add multilingual support (Hindi/English)
+8. LOW — Performance optimization (image compression, lazy loading, CDN)

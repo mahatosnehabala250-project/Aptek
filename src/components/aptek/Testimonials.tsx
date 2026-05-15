@@ -51,11 +51,11 @@ const testimonials = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-1" style={{ filter: 'drop-shadow(0 0 3px rgba(245, 158, 11, 0.35))' }}>
       {[1, 2, 3, 4, 5].map((star) => (
         <Star
           key={star}
-          className={`w-4 h-4 ${
+          className={`w-4 h-4 md:w-5 md:h-5 transition-all duration-200 ${
             star <= rating
               ? 'fill-[#F59E0B] text-[#F59E0B]'
               : 'fill-gray-200 text-gray-200'
@@ -171,47 +171,68 @@ export default function Testimonials() {
               className="flex gap-5 md:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
               style={{ scrollSnapType: 'x mandatory' }}
             >
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.name}
-                  className="flex-shrink-0 w-[320px] sm:w-[360px] md:w-[380px] snap-start"
-                >
-                  <div className="h-full rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-[#00A651]/15 transition-all duration-300 p-6 md:p-7 flex flex-col">
-                    {/* Quote Icon */}
-                    <div className="mb-4">
-                      <div className="w-10 h-10 rounded-full bg-[#F0FDF4] flex items-center justify-center">
-                        <Quote className="w-5 h-5 text-[#00A651]" />
-                      </div>
-                    </div>
+              {testimonials.map((testimonial, index) => {
+                const isActive = index === activeIndex;
+                return (
+                  <div
+                    key={testimonial.name}
+                    className="flex-shrink-0 w-[320px] sm:w-[360px] md:w-[380px] snap-start"
+                  >
+                    <div
+                      className={`h-full rounded-2xl bg-white overflow-hidden flex flex-col transition-all duration-300 ${
+                        isActive
+                          ? 'border border-[#00A651]/20 shadow-lg'
+                          : 'border border-gray-100 shadow-sm hover:shadow-md hover:border-[#00A651]/15'
+                      }`}
+                    >
+                      {/* Card gradient accent */}
+                      <div className="h-1 w-full bg-gradient-to-r from-[#00A651] to-[#8BC34A] rounded-t-2xl" />
 
-                    {/* Stars */}
-                    <div className="mb-4">
-                      <StarRating rating={testimonial.rating} />
-                    </div>
+                      <div className="p-6 md:p-7 flex flex-col flex-1">
+                        {/* Quote Icon */}
+                        <div className="mb-4">
+                          <div className="w-10 h-10 rounded-full bg-[#F0FDF4] flex items-center justify-center">
+                            <Quote className="w-5 h-5 text-[#00A651]" />
+                          </div>
+                        </div>
 
-                    {/* Review Text */}
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed flex-1 mb-5">
-                      &ldquo;{testimonial.text}&rdquo;
-                    </p>
+                        {/* Stars */}
+                        <div className="mb-4">
+                          <StarRating rating={testimonial.rating} />
+                        </div>
 
-                    {/* Author */}
-                    <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                      <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#00A651] to-[#8BC34A] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                        {testimonial.name.split(' ').map((n) => n[0]).join('')}
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900 text-sm md:text-base">
-                          {testimonial.name}
-                        </h4>
-                        <p className="text-gray-500 text-xs md:text-sm">
-                          {testimonial.role}, {testimonial.company}
+                        {/* Review Text with left border accent */}
+                        <p className="text-gray-600 text-sm md:text-base leading-relaxed flex-1 mb-5 border-l-2 border-[#00A651]/20 pl-4">
+                          &ldquo;{testimonial.text}&rdquo;
                         </p>
+
+                        {/* Author */}
+                        <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00A651] to-[#8BC34A] ring-2 ring-[#00A651]/20 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                            {testimonial.name.split(' ').map((n) => n[0]).join('')}
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-gray-900 text-sm md:text-base">
+                              {testimonial.name}
+                            </h4>
+                            <p className="text-gray-500 text-xs md:text-sm">
+                              {testimonial.role}, {testimonial.company}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
+          </div>
+
+          {/* Swipe indicator on mobile */}
+          <div className="md:hidden text-center mt-4 mb-1">
+            <span className="text-gray-500 text-sm font-medium tracking-wide">
+              Swipe to explore <span className="inline-block ml-1 animate-bounce">→</span>
+            </span>
           </div>
 
           {/* Navigation Arrows */}

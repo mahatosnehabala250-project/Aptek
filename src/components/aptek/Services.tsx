@@ -98,17 +98,25 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className={`service-card rounded-2xl p-6 md:p-8 bg-white group relative overflow-hidden group-hover:shadow-xl group-hover:shadow-[#00A651]/5 ${
+              className={`service-card rounded-2xl p-6 md:p-8 bg-white group relative overflow-hidden shadow-sm group-hover:shadow-xl group-hover:shadow-[#00A651]/5 border border-gray-100/80 transition-all duration-300 group-hover:-translate-y-1 ${
                 i === 4 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
+              {/* Border top accent — 3px green gradient */}
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#00A651] to-[#8BC34A] rounded-t-2xl" />
+
               {/* Subtle gradient background */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#F0FDF4]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
+              {/* Decorative large number */}
+              <span className="absolute top-2 right-4 md:top-3 md:right-6 text-[4.5rem] md:text-[6rem] font-black text-gray-100/50 leading-none select-none pointer-events-none z-0">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/10 transition-colors duration-300">
-                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#00A651]" />
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/10 transition-all duration-300 group-hover:scale-110 group-hover:[animation:bounce-subtle_0.5s_ease_1]">
+                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#00A651] transition-transform duration-300" />
                 </div>
 
                 {/* Title */}
@@ -116,13 +124,13 @@ export default function Services() {
                   {service.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                {/* Description — slightly larger on desktop */}
+                <p className="text-gray-600 text-sm md:text-[15px] lg:text-[17px] leading-relaxed mb-5">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {service.features.map((feature) => (
                     <span
                       key={feature}
@@ -133,16 +141,35 @@ export default function Services() {
                   ))}
                 </div>
 
-                {/* Arrow icon on hover */}
-                <div className="mt-5 flex items-center text-[#00A651] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                  <span className="text-sm font-semibold mr-1">Learn more</span>
-                  <ArrowRight size={16} />
-                </div>
+                {/* Explore Service link — always visible */}
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#00A651] hover:text-[#008C45] transition-colors duration-200 group/link"
+                >
+                  <span>Explore Service</span>
+                  <ArrowRight
+                    size={15}
+                    className="transition-transform duration-200 group-hover/link:translate-x-0.5"
+                  />
+                </a>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      {/* Bounce keyframe for icon hover */}
+      <style jsx>{`
+        @keyframes bounce-subtle {
+          0%,
+          100% {
+            transform: scale(1.1) translateY(0);
+          }
+          50% {
+            transform: scale(1.1) translateY(-3px);
+          }
+        }
+      `}</style>
     </section>
   );
 }
