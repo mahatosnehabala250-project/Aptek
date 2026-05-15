@@ -43,6 +43,7 @@ export default function Navbar() {
             ? 'navbar-blur bg-white/90 border-b border-gray-100 shadow-sm'
             : 'bg-transparent'
         }`}
+        style={!isScrolled ? { textShadow: '0 1px 6px rgba(0,0,0,0.4)' } : undefined}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -92,7 +93,7 @@ export default function Navbar() {
                   className={`px-4 py-2 text-sm font-medium transition-colors duration-300 relative group ${
                     isScrolled
                       ? 'text-gray-600 hover:text-[#00A651]'
-                      : 'text-white/80 hover:text-white'
+                      : 'text-white hover:text-white'
                   }`}
                 >
                   {link.label}

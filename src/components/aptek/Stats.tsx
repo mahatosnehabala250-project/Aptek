@@ -46,7 +46,7 @@ function AnimatedCounter({ stat, isInView }: { stat: StatItem; isInView: boolean
       <div className="text-3xl sm:text-4xl md:text-5xl font-black text-[#00A651] mb-2">
         {stat.prefix}{count}{stat.suffix}
       </div>
-      <div className="text-sm sm:text-base text-gray-500 font-medium uppercase tracking-wider">
+      <div className="text-sm sm:text-base text-gray-600 font-medium uppercase tracking-wider">
         {stat.label}
       </div>
     </div>

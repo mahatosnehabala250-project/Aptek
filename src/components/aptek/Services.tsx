@@ -77,7 +77,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 md:mt-6 text-gray-500 text-base md:text-lg max-w-2xl mx-auto"
+            className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
             Comprehensive outdoor advertising solutions designed to make your brand
             the center of attention everywhere.
@@ -107,7 +107,7 @@ export default function Services() {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 text-sm md:text-base leading-relaxed mb-5">
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
                 {service.description}
               </p>
 

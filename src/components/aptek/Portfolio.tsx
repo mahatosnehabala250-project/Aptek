@@ -113,7 +113,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 md:mt-6 text-gray-500 text-base md:text-lg max-w-2xl mx-auto"
+            className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
             Every project is a testament to our commitment to excellence. Explore our
             portfolio of successfully executed outdoor advertising campaigns.
@@ -192,7 +192,7 @@ export default function Portfolio() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="text-center mt-12 md:mt-16"
         >
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-gray-500 text-sm mb-4">
             Want to see more of our work or discuss your project?
           </p>
           <a

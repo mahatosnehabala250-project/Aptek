@@ -69,3 +69,31 @@ Stage Summary:
 - Custom SVG logo mark created matching V Card green "A" design
 - All 10 components + layout + CSS updated consistently
 - WhatsApp integration messages updated with new brand name
+
+---
+Task ID: 3
+Agent: Main Agent
+Task: Switch from dark theme to light/white theme + Fix text readability
+
+Work Log:
+- Changed globals.css: background from #0B0B0F to #FFFFFF, text from white to #1A1A2E
+- Updated all components from dark to light backgrounds (white cards, light gray sections)
+- Changed all CSS variables for light theme (card, popover, muted, border, etc.)
+- Rebuilt Hero section: Dark overlay gradient for white text over background image
+- Added text-shadow to Hero text (white text with black shadow for contrast)
+- Added text-shadow to Navbar when transparent (over hero background)
+- Changed all body text from gray-500 to gray-600 for better readability
+- Updated Services, Portfolio, Clients, Contact, Stats text colors
+- Generated new darker/moodody hero image (twilight cityscape with billboards) for better text contrast
+- Badge changed to solid green background with white text for maximum visibility
+- CTA buttons improved: Green button with shadow, White button with backdrop-blur
+- Trusted by section: White text with text shadows over dark overlay
+- ESLint: 0 errors, all pages compiling and serving 200 OK
+
+Stage Summary:
+- Website fully switched from dark/black theme to clean light/white theme
+- Brand colors preserved: Green #00A651, Navy #1A365D
+- Text readability dramatically improved across all sections
+- New dark hero image generated for better white text contrast
+- Text shadows added to hero and navbar for legibility over background image
+- All subtitle/description text upgraded from gray-500 to gray-600

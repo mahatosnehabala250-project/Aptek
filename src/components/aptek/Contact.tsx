@@ -69,7 +69,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 md:mt-6 text-gray-500 text-base md:text-lg max-w-2xl mx-auto"
+            className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
             Ready to make your brand unmissable? Reach out to us and let&apos;s
             discuss how we can elevate your outdoor advertising.
@@ -101,7 +101,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <h4 className="text-gray-900 text-xl font-bold mb-2">Inquiry Sent!</h4>
-                  <p className="text-gray-500">We&apos;ll get back to you shortly. You can also reach us on WhatsApp for instant response.</p>
+                  <p className="text-gray-500 leading-relaxed">We&apos;ll get back to you shortly. You can also reach us on WhatsApp for instant response.</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -183,7 +183,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 font-semibold text-sm mb-1">Office Address</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">APTEK Media<br />Main Road, City Center<br />India</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">APTEK Media<br />Main Road, City Center<br />India</p>
                 </div>
               </div>
 
@@ -193,7 +193,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 font-semibold text-sm mb-1">Phone</h4>
-                  <a href="tel:+919999999999" className="text-gray-500 text-sm hover:text-[#00A651] transition-colors">+91 99999 99999</a>
+                  <a href="tel:+919999999999" className="text-gray-600 text-sm hover:text-[#00A651] transition-colors">+91 99999 99999</a>
                 </div>
               </div>
 
@@ -203,7 +203,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 font-semibold text-sm mb-1">Email</h4>
-                  <a href="mailto:info@aptekmedia.in" className="text-gray-500 text-sm hover:text-[#00A651] transition-colors">info@aptekmedia.in</a>
+                  <a href="mailto:info@aptekmedia.in" className="text-gray-600 text-sm hover:text-[#00A651] transition-colors">info@aptekmedia.in</a>
                 </div>
               </div>
 
@@ -213,7 +213,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 font-semibold text-sm mb-1">Working Hours</h4>
-                  <p className="text-gray-500 text-sm">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                  <p className="text-gray-600 text-sm">Mon - Sat: 9:00 AM - 7:00 PM</p>
                 </div>
               </div>
             </div>
@@ -242,7 +242,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 font-bold text-base group-hover:text-[#008C45] transition-colors">Need Instant Response?</h4>
-                  <p className="text-gray-500 text-sm mt-0.5">Chat with us on WhatsApp for a quick quote</p>
+                  <p className="text-gray-600 text-sm mt-0.5">Chat with us on WhatsApp for a quick quote</p>
                 </div>
               </div>
             </a>

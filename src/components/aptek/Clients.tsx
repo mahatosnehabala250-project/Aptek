@@ -63,7 +63,7 @@ export default function Clients() {
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 md:mt-6 text-gray-500 text-base md:text-lg max-w-2xl mx-auto"
+            className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
             We&apos;re proud to partner with India&apos;s most recognized brands,
             delivering advertising solutions that drive real results.
@@ -91,7 +91,7 @@ export default function Clients() {
                 <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                   {client.name}
                 </h3>
-                <p className="text-gray-500 text-sm">{client.description}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{client.description}</p>
               </div>
             </motion.div>
           ))}
@@ -124,7 +124,7 @@ export default function Clients() {
                 <item.icon className="w-6 h-6 text-[#00A651]" />
               </div>
               <h4 className="text-gray-900 font-bold text-base md:text-lg mb-2">{item.title}</h4>
-              <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>
