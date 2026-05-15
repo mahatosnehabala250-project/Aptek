@@ -38,10 +38,10 @@ export default function Clients() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="clients" className="relative py-16 md:py-24 bg-white">
+    <section id="clients" className="relative py-12 md:py-16 bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-14 md:mb-20">
+        <div className="text-center mb-10 md:mb-12">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -71,7 +71,7 @@ export default function Clients() {
         </div>
 
         {/* Client Cards */}
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mb-16 md:mb-20">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 mb-10 md:mb-12">
           {clients.map((client, i) => (
             <motion.div
               key={client.abbr}
@@ -98,9 +98,9 @@ export default function Clients() {
         </div>
 
         {/* Why Choose Us */}
-        <div className="section-divider mb-10 md:mb-14" />
+        <div className="section-divider mb-8 md:mb-10" />
 
-        <div className="text-center mb-8 md:mb-10">
+        <div className="text-center mb-6 md:mb-8">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
