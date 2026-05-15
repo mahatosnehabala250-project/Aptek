@@ -87,10 +87,15 @@ export default function Contact() {
                   <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">Service Required *</label>
                   <select name="service" required className="form-input-aptek w-full px-4 py-3 rounded-xl text-sm appearance-none">
                     <option value="">Select a service</option>
-                    <option value="Hoarding Advertising">Hoarding Advertising</option>
+                    <option value="Hoardings">Hoardings</option>
                     <option value="Outdoor Advertising">Outdoor Advertising</option>
                     <option value="Flex Printing">Flex Printing</option>
-                    <option value="Banner Advertising">Banner Advertising</option>
+                    <option value="Shop Branding">Shop Branding</option>
+                    <option value="Banner Printing">Banner Printing</option>
+                    <option value="Event Branding">Event Branding</option>
+                    <option value="Political Campaign Branding">Political Campaign Branding</option>
+                    <option value="Billboard Installation">Billboard Installation</option>
+                    <option value="LED Sign Boards">LED Sign Boards</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
@@ -170,7 +175,7 @@ export default function Contact() {
             {/* Google Maps */}
             <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm h-40 sm:h-48 md:h-56 hover:shadow-md transition-shadow duration-300">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.0!2d85.1!3d25.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzAwLjAiTiA4NcKwMDYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=23.3268592,86.3674747&z=16&output=embed"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade" title="APTEK Media Office Location"
               />

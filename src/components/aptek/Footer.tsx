@@ -6,10 +6,15 @@ import { ArrowUp, Instagram, Facebook, Linkedin, Youtube, MapPin, Phone, Mail } 
 
 const footerLinks = {
   services: [
-    { label: 'Hoarding Advertising', href: '#services' },
+    { label: 'Hoardings', href: '#services' },
     { label: 'Outdoor Advertising', href: '#services' },
     { label: 'Flex Printing', href: '#services' },
-    { label: 'Banner Advertising', href: '#services' },
+    { label: 'Shop Branding', href: '#services' },
+    { label: 'Banner Printing', href: '#services' },
+    { label: 'Event Branding', href: '#services' },
+    { label: 'Political Campaign Branding', href: '#services' },
+    { label: 'Billboard Installation', href: '#services' },
+    { label: 'LED Sign Boards', href: '#services' },
   ],
   company: [
     { label: 'About APTEK Media', href: '#clients' },
@@ -190,7 +195,7 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-500 text-xs md:text-sm text-center sm:text-left">
-            &copy; {new Date().getFullYear()} APTEK Media. All rights reserved. | A Complete AD Publicity
+            &copy; {new Date().getFullYear()} APTEK Media. All rights reserved. | Established 2016 | A Complete AD Publicity
           </p>
           <motion.button
             onClick={scrollToTop}

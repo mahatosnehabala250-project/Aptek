@@ -8,15 +8,19 @@ import {
   PanelTop,
   Image,
   ArrowRight,
+  Store,
+  Flag,
+  Tv,
+  Zap,
 } from 'lucide-react';
 
 const services = [
   {
     icon: PanelTop,
-    title: 'Hoarding Advertising',
+    title: 'Hoardings',
     description:
-      'Strategically placed billboards and hoardings on highways, city roads, and prime locations to maximize your brand visibility.',
-    features: ['Highway Hoardings', 'City Billboards', 'Unipoles', 'LED Screens'],
+      'Strategically placed hoardings on highways, city roads, and prime locations to maximize your brand visibility across West Bengal.',
+    features: ['Highway Hoardings', 'City Hoardings', 'Unipoles', 'Prime Locations'],
   },
   {
     icon: Megaphone,
@@ -33,11 +37,46 @@ const services = [
     features: ['Large Format Print', 'Vinyl Printing', 'Mesh Printing', 'Backlit Flex'],
   },
   {
-    icon: Image,
-    title: 'Banner Advertising',
+    icon: Store,
+    title: 'Shop Branding',
     description:
-      'Eye-catching banner designs and installations for events, retail spaces, exhibitions, and promotional campaigns.',
-    features: ['Event Banners', 'Retail Displays', 'Exhibition Displays', 'Roll-up Banners'],
+      'Complete shop front branding solutions including signage, fascia boards, and storefront displays to attract more customers.',
+    features: ['Shop Signage', 'Fascia Boards', 'Storefront Display', 'Name Boards'],
+  },
+  {
+    icon: Image,
+    title: 'Banner Printing',
+    description:
+      'Eye-catching banner printing for events, retail spaces, exhibitions, and promotional campaigns with premium quality materials.',
+    features: ['Event Banners', 'Retail Banners', 'Exhibition Banners', 'Roll-up Banners'],
+  },
+  {
+    icon: Zap,
+    title: 'Event Branding',
+    description:
+      'Complete event branding solutions from stage backdrops to entrance arches, making your events visually impactful and memorable.',
+    features: ['Stage Backdrops', 'Entrance Arches', 'Event Banners', 'Stall Branding'],
+  },
+  {
+    icon: Flag,
+    title: 'Political Campaign Branding',
+    description:
+      'Professional political campaign branding including hoardings, banners, flex printing, and mass visibility solutions.',
+    features: ['Campaign Hoardings', 'Rally Banners', 'Flex Printing', 'Mass Coverage'],
+  },
+  {
+    icon: Tv,
+    title: 'Billboard Installation',
+    description:
+      'Expert billboard installation services with structural fabrication, mounting, and maintenance for long-lasting outdoor presence.',
+    features: ['Structural Fabrication', 'Safe Mounting', 'Maintenance', 'Custom Sizes'],
+  },
+  {
+    icon: Zap,
+    title: 'LED Sign Boards',
+    description:
+      'High-brightness LED sign boards and scrolling displays for maximum visibility day and night for your business.',
+    features: ['LED Scrolling Boards', 'Glow Sign Boards', 'Neon Signs', '24/7 Visibility'],
   },
 ];
 
