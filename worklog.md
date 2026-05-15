@@ -384,3 +384,40 @@ HANDOVER DOCUMENT — APTEK MEDIA WEBSITE (UPDATED)
 6. LOW — Add dark mode toggle
 7. LOW — Add multilingual support (Hindi/English)
 8. LOW — Performance optimization (image compression, lazy loading, CDN)
+
+---
+Task ID: 8
+Agent: Main Agent
+Task: Replace hero background image with user's real photograph
+
+Work Log:
+- User uploaded real photograph of Indian city street scene (dusk/evening) showing outdoor billboards (PNB, Shyam Steel, Axis Bank, Tanishq)
+- Analyzed uploaded image with VLM: 5504x3040 resolution, 7/10 quality (minor motion blur, compression artifacts)
+- Copied uploaded image to `/public/images/hero-bg.jpg`
+- Optimized image for web: resized from 5504px to 1920px width, compressed from 4.0MB to 415KB (90% reduction)
+- Removed old AI-generated hero-bg.png
+- Updated Hero.tsx: changed image reference from `.png` to `.jpg`
+
+**Hero Overlay & Text Readability Fixes (based on VLM graphic designer review):**
+- Initial QA: Desktop 7/10, Mobile 7.5/10
+- Added extra `bg-black/15` overlay layer to dim bright billboards that competed with text
+- Strengthened vignette: 200px→250px, opacity 0.3→0.4 for cinematic depth
+- Added `tracking-wide` to subtitle for better letter spacing
+- Improved WhatsApp Us button: border-white/90, font-semibold→font-bold, bg-white/20→bg-white/30, backdrop-blur-sm→backdrop-blur-md, stronger shadow
+- Post-fix QA: Desktop 8/10, Mobile 8/10 (VLM confirmed professional & premium feel)
+
+**QA Results:**
+- White text "YOUR BRAND." — clearly readable ✅
+- Green text "OUR CANVAS." — readable and vibrant ✅
+- Subtitle text — easy to read ✅
+- Both CTA buttons — clearly visible ✅
+- ESLint: 0 errors
+- Dev server: 200 OK
+
+Stage Summary:
+- Replaced AI-generated hero image with user's real photograph (actual outdoor advertising scene)
+- Image optimized: 4MB → 415KB (90% smaller, 1920x1060)
+- Hero overlay improved to handle bright billboards in background
+- WhatsApp Us button visibility enhanced
+- VLM hero score improved from 7/10 → 8/10
+- 0 errors, website stable
