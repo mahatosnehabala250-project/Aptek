@@ -44,10 +44,10 @@ export default function Process() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="process" className="relative py-12 md:py-16 bg-[#F8FAFC]">
+    <section id="process" className="relative py-10 md:py-14 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-10 md:mb-12">
+        <div className="text-center mb-8 md:mb-10">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
