@@ -29,22 +29,7 @@ const portfolioItems = [
     description: 'Complete building facade advertising covering entire exterior surface for maximum exposure.',
     client: 'Corporate Client',
   },
-  {
-    id: 4,
-    src: '/images/portfolio-led-billboard.png',
-    title: 'LED Billboard Display',
-    category: 'Digital',
-    description: 'Illuminated LED billboard display creating stunning visual impact in high-traffic urban locations.',
-    client: 'Retail Brand',
-  },
-  {
-    id: 5,
-    src: '/images/portfolio-vehicle-branding.png',
-    title: 'Vehicle Fleet Advertising',
-    category: 'Outdoor',
-    description: 'Complete vehicle fleet advertising with high-quality vinyl wraps for mobile advertising.',
-    client: 'Logistics Company',
-  },
+
   {
     id: 6,
     src: '/images/portfolio-roadside-advertising.png',
@@ -71,7 +56,7 @@ const portfolioItems = [
   },
 ];
 
-const categories = ['All', 'Hoardings', 'Flex Printing', 'Digital', 'Outdoor', 'Events'];
+const categories = ['All', 'Hoardings', 'Flex Printing', 'Outdoor', 'Events'];
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('All');
