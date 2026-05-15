@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
@@ -46,7 +45,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className="text-gray-500 text-base sm:text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              India&apos;s premium outdoor advertising — from design to installation, one team.
+              Purulia &amp; West Bengal&apos;s trusted outdoor advertising partner since 2016 — from design to installation, one team.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -65,13 +64,17 @@ export default function Hero() {
                 <MessageCircle size={16} />
                 Get Free Quote
               </a>
-              <Link
-                href="/portfolio"
+              <a
+                href="#portfolio"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gray-200 hover:border-[#00A651]/40 text-gray-700 hover:text-[#00A651] font-semibold text-sm sm:text-base rounded-full transition-all duration-300 hover:bg-[#00A651]/5"
               >
                 See Our Work
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
-              </Link>
+              </a>
             </motion.div>
           </div>
 
