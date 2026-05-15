@@ -6,18 +6,21 @@ import { ArrowDown } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Static */}
+      {/* Background Image - Static, Crisp */}
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.jpg"
           alt="APTEK MEDIA Outdoor Advertising"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
-        <div className="hero-gradient absolute inset-0" />
-        {/* Extra dark overlay to dim bright billboards */}
-        <div className="absolute inset-0 bg-black/15" />
-        {/* Subtle vignette for cinematic depth */}
-        <div className="absolute inset-0" style={{ boxShadow: 'inset 0 0 250px rgba(0,0,0,0.4)' }} />
+        {/* Light gradient overlay — minimal darkening, let image shine through */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.10) 50%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0.30) 100%)',
+          }}
+        />
       </div>
 
       {/* Content */}
@@ -44,19 +47,19 @@ export default function Hero() {
         >
           <span
             className="text-white block"
-            style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4)' }}
+            style={{ textShadow: '0 3px 40px rgba(0,0,0,0.8), 0 1px 8px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.4)' }}
           >
             YOUR BRAND.
           </span>
           <span
             className="block mt-1 md:mt-2"
             style={{
-              background: 'linear-gradient(135deg, #00E676, #00C462, #00A651)',
+              background: 'linear-gradient(135deg, #6EE7A0, #4ADE80, #22C55E)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               textShadow: 'none',
-              filter: 'drop-shadow(0 2px 12px rgba(0,166,81,0.5)) drop-shadow(0 0px 3px rgba(0,0,0,0.3))',
+              filter: 'drop-shadow(0 3px 15px rgba(0,0,0,0.8)) drop-shadow(0 0 4px rgba(0,0,0,0.6)) drop-shadow(0 0 30px rgba(0,166,81,0.3))',
             }}
           >
             OUR CANVAS.
@@ -69,7 +72,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-white text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed tracking-wide"
-          style={{ textShadow: '0 1px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)' }}
+          style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 1px 6px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.3)' }}
         >
           Premium outdoor advertising solutions that make your brand impossible to ignore.
           From highway hoardings to city-wide branding — we make your brand visible.
