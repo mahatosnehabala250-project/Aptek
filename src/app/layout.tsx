@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "APTEK MEDIA | A Complete AD Publicity - Outdoor Advertising Solutions",
+  title: "APTEK MEDIA | Outdoor Advertising in Purulia & West Bengal | Hoardings, Flex Printing",
   description:
-    "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising company specializing in hoardings, flex printing, banner advertising, and promotional campaigns across India.",
+    "APTEK MEDIA - Trusted outdoor advertising partner in Purulia & West Bengal since 2016. Specialists in hoardings, flex printing, shop branding, billboard installation, event branding & LED sign boards.",
   keywords: [
     "APTEK Media",
     "APTEK",
@@ -45,17 +45,17 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "APTEK MEDIA | A Complete AD Publicity",
+    title: "APTEK MEDIA | Outdoor Advertising in Purulia & West Bengal",
     description:
-      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising, hoardings, flex printing, banner advertising & more.",
+      "Purulia & West Bengal's trusted outdoor advertising partner since 2016 — hoardings, flex printing, shop branding & more.",
     type: "website",
     siteName: "APTEK MEDIA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "APTEK MEDIA | A Complete AD Publicity",
+    title: "APTEK MEDIA | Outdoor Advertising in Purulia & West Bengal",
     description:
-      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising company.",
+      "Trusted outdoor advertising partner in Purulia & West Bengal since 2016.",
   },
 };
 

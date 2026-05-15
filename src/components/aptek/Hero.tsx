@@ -46,7 +46,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className="text-gray-500 text-base sm:text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              India&apos;s premium outdoor advertising — from design to installation, one team.
+              Purulia &amp; West Bengal&apos;s trusted outdoor advertising partner since 2016 — from design to installation, one team.
             </motion.p>
 
             {/* CTA Buttons */}
