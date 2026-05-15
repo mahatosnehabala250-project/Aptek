@@ -40,11 +40,11 @@ const steps = [
 ];
 
 export default function Process() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
 
   return (
-    <section id="process" className="relative py-8 md:py-10 bg-[#F8FAFC]">
+    <section id="process" ref={sectionRef} className="relative py-8 md:py-10 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6 md:mb-8">
@@ -78,7 +78,7 @@ export default function Process() {
 
         {/* Desktop Horizontal Timeline */}
         <div className="hidden lg:block">
-          <div ref={ref} className="relative">
+          <div className="relative">
             {/* Connecting Line */}
             <div className="absolute top-12 left-[calc(12.5%+28px)] right-[calc(12.5%+28px)] h-0.5 bg-gradient-to-r from-[#00A651] via-[#8BC34A] to-[#00A651]" />
 
@@ -138,7 +138,7 @@ export default function Process() {
         </div>
 
         {/* Mobile / Tablet Vertical Timeline */}
-        <div className="lg:hidden space-y-0" ref={ref}>
+        <div className="lg:hidden space-y-0">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
