@@ -21,7 +21,7 @@ export default function Contact() {
     const waMessage = encodeURIComponent(
       `Hi APTEK MEDIA!\n\nI'd like to inquire about your advertising services.\n\n📋 *Name:* ${name}\n📱 *Phone:* ${phone}\n🔧 *Service:* ${service}${message ? `\n💬 *Message:* ${message}` : ''}\n\nPlease share pricing and availability. Thanks!`
     );
-    window.open(`https://wa.me/919999999999?text=${waMessage}`, '_blank');
+    window.open(`https://wa.me/919932138191?text=${waMessage}`, '_blank');
   };
 
   return (
@@ -142,7 +142,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 font-semibold text-xs sm:text-sm mb-1">Phone</h4>
-                  <a href="tel:+919999999999" className="text-gray-600 text-xs sm:text-sm hover:text-[#00A651] transition-colors">+91 99999 99999</a>
+                  <a href="tel:+919932138191" className="text-gray-600 text-xs sm:text-sm hover:text-[#00A651] transition-colors">+91 99321 38191</a>
                 </div>
               </div>
 
@@ -178,7 +178,7 @@ export default function Contact() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20need%20a%20quick%20quote%20for%20advertising."
+              href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20need%20a%20quick%20quote%20for%20advertising."
               target="_blank"
               rel="noopener noreferrer"
               className="block rounded-2xl p-4 sm:p-5 md:p-6 bg-[#F0FDF4] border border-[#00A651]/10 hover:border-[#00A651]/30 transition-all duration-300 group"

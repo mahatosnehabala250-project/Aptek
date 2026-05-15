@@ -103,7 +103,7 @@ export default function Navbar() {
             {/* CTA Button */}
             <div className="hidden md:flex items-center gap-3">
               <a
-                href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20to%20know%20about%20your%20advertising%20services."
+                href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20to%20know%20about%20your%20advertising%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00A651] hover:bg-[#008C45] text-white font-semibold text-sm rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#00A651]/20"
@@ -183,7 +183,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20to%20know%20about%20your%20advertising%20services."
+                href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20to%20know%20about%20your%20advertising%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}

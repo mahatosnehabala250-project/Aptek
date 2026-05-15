@@ -349,7 +349,7 @@ export default function Portfolio() {
             Want to see more of our work or discuss your project?
           </p>
           <a
-            href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20loved%20your%20portfolio%20and%20want%20to%20discuss%20a%20project."
+            href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20loved%20your%20portfolio%20and%20want%20to%20discuss%20a%20project."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-[#00A651] hover:bg-[#008C45] text-white font-bold text-sm rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#00A651]/20"
@@ -437,7 +437,7 @@ export default function Portfolio() {
 
                 {/* WhatsApp inquire button */}
                 <a
-                  href={`https://wa.me/919999999999?text=${encodeURIComponent(
+                  href={`https://wa.me/919932138191?text=${encodeURIComponent(
                     `Hi APTEK MEDIA, I'm interested in your project: "${selectedImage.title}" (${selectedImage.category}). Can you share more details?`
                   )}`}
                   target="_blank"

@@ -56,7 +56,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4"
             >
               <a
-                href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20a%20free%20quote%20for%20outdoor%20advertising%20for%20my%20business."
+                href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20a%20free%20quote%20for%20outdoor%20advertising%20for%20my%20business."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#00A651] text-white font-bold text-sm sm:text-base rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-[#00A651]/25 hover:scale-[1.03]"

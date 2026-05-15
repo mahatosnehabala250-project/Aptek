@@ -113,7 +113,7 @@ export default function Footer() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20am%20interested%20in%20your%20services."
+              href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20am%20interested%20in%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00A651] hover:bg-[#00C462] text-white font-semibold text-sm rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[#00A651]/20"
@@ -173,9 +173,9 @@ export default function Footer() {
                   <p>India</p>
                 </div>
               </div>
-              <a href="tel:+919999999999" className="flex items-center gap-3 hover:text-[#00A651] transition-colors">
+              <a href="tel:+919932138191" className="flex items-center gap-3 hover:text-[#00A651] transition-colors">
                 <Phone size={16} className="text-[#00A651] flex-shrink-0" />
-                <span>+91 99999 99999</span>
+                <span>+91 99321 38191</span>
               </a>
               <a href="mailto:info@aptekmedia.in" className="flex items-center gap-3 hover:text-[#00A651] transition-colors">
                 <Mail size={16} className="text-[#00A651] flex-shrink-0" />

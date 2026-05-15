@@ -93,7 +93,7 @@ export default function CTABanner() {
         >
           {/* Get Free Quote — WhatsApp */}
           <a
-            href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20a%20free%20quote%20for%20outdoor%20advertising."
+            href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20a%20free%20quote%20for%20outdoor%20advertising."
             target="_blank"
             rel="noopener noreferrer"
             className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 bg-white hover:bg-gray-50 text-[#00A651] font-bold text-sm sm:text-base rounded-full transition-all duration-300 hover:shadow-xl hover:shadow-black/10 hover:scale-[1.03]"
@@ -104,7 +104,7 @@ export default function CTABanner() {
 
           {/* Call Now */}
           <a
-            href="tel:+919999999999"
+            href="tel:+919932138191"
             className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 border-2 border-white/70 hover:border-white text-white font-bold text-sm sm:text-base rounded-full transition-all duration-300 bg-white/10 hover:bg-white/20 backdrop-blur-sm"
           >
             <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />

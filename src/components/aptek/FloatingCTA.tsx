@@ -65,14 +65,14 @@ export default function FloatingCTA() {
               {/* CTA Buttons */}
               <div className="flex items-center gap-2 flex-shrink-0">
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+919932138191"
                   className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors"
                   aria-label="Call us"
                 >
                   <Phone size={16} />
                 </a>
                 <a
-                  href="https://wa.me/919999999999?text=Hi%20APTEK%20MEDIA%2C%20I%20need%20a%20quick%20quote%20for%20advertising."
+                  href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20need%20a%20quick%20quote%20for%20advertising."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2.5 bg-[#25D366] hover:bg-[#22c55e] text-white font-bold text-xs rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-green-500/30"
