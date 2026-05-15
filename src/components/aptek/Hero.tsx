@@ -98,15 +98,13 @@ export default function Hero() {
               <div className="absolute -inset-3 bg-gradient-to-br from-[#00A651]/15 to-transparent rounded-3xl blur-3xl" />
 
               {/* Image frame — crystal clear, NO blur */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/60 border border-white/[0.08]">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/60 border border-white/[0.08] bg-[#111]">
                 <img
                   src="/images/hero-bg.jpg"
                   alt="APTEK MEDIA — Billboard Outdoor Advertising Work"
-                  className="w-full h-[280px] sm:h-[350px] lg:h-[480px] object-cover"
+                  className="w-full h-auto object-contain"
                   fetchPriority="high"
                 />
-                {/* Very subtle bottom gradient for polish */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
               </div>
             </div>
           </motion.div>
