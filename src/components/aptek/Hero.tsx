@@ -6,14 +6,16 @@ import { ArrowDown } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Ken Burns effect */}
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.png"
           alt="APTEK MEDIA Outdoor Advertising"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 animate-[kenburns_20s_ease-in-out_infinite_alternate]"
         />
         <div className="hero-gradient absolute inset-0" />
+        {/* Subtle vignette */}
+        <div className="absolute inset-0" style={{ boxShadow: 'inset 0 0 200px rgba(0,0,0,0.3)' }} />
       </div>
 
       {/* Content */}
@@ -47,12 +49,12 @@ export default function Hero() {
           <span
             className="block mt-1 md:mt-2"
             style={{
-              background: 'linear-gradient(135deg, #00C462, #00A651, #8BC34A)',
+              background: 'linear-gradient(135deg, #00E676, #00C462, #00A651)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
               textShadow: 'none',
-              filter: 'drop-shadow(0 2px 8px rgba(0,166,81,0.3))',
+              filter: 'drop-shadow(0 2px 12px rgba(0,166,81,0.5)) drop-shadow(0 0px 3px rgba(0,0,0,0.3))',
             }}
           >
             OUR CANVAS.

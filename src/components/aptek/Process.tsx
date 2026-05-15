@@ -60,10 +60,10 @@ export default function Process() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 heading-gradient-wrap"
           >
-            How We{' '}
-            <span className="text-gradient-brand">Work</span>
+            {'How We '}
+            <span className="text-gradient-brand">{'Work'}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}

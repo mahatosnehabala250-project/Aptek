@@ -12,10 +12,15 @@ import FAQ from '@/components/aptek/FAQ';
 import Contact from '@/components/aptek/Contact';
 import Footer from '@/components/aptek/Footer';
 import WhatsAppButton from '@/components/aptek/WhatsAppButton';
+import PageLoader from '@/components/aptek/PageLoader';
+import FloatingCTA from '@/components/aptek/FloatingCTA';
+import ScrollProgress from '@/components/aptek/ScrollProgress';
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <PageLoader />
+      <ScrollProgress />
       <Navbar />
       <main className="flex-1">
         <Hero />
@@ -30,6 +35,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <FloatingCTA />
     </div>
   );
 }
