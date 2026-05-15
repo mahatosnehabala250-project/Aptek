@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "APTEK MEDIA | A Complete AD Publicity - Outdoor Advertising & Branding Solutions",
+  title: "APTEK MEDIA | A Complete AD Publicity - Outdoor Advertising Solutions",
   description:
-    "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising and branding company specializing in hoardings, flex printing, banner branding, and promotional advertising across India.",
+    "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising company specializing in hoardings, flex printing, banner advertising, and promotional campaigns across India.",
   keywords: [
     "APTEK Media",
     "APTEK",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     "hoardings",
     "billboards",
     "flex printing",
-    "banner branding",
+    "banner advertising",
     "promotional advertising",
-    "branding solutions",
+    "advertising solutions",
     "India advertising",
     "commercial advertising",
     "DPS hoardings",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "APTEK MEDIA | A Complete AD Publicity",
     description:
-      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising, hoardings, flex printing, banner branding & more.",
+      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising, hoardings, flex printing, banner advertising & more.",
     type: "website",
     siteName: "APTEK MEDIA",
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "APTEK MEDIA | A Complete AD Publicity",
     description:
-      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising & branding company.",
+      "APTEK MEDIA - A Complete AD Publicity. Premier outdoor advertising company.",
   },
 };
 

@@ -24,9 +24,9 @@ const portfolioItems = [
   {
     id: 3,
     src: '/images/portfolio-building-wrap.png',
-    title: 'Building Wrap Branding',
-    category: 'Branding',
-    description: 'Complete building facade branding covering entire exterior surface for maximum brand exposure.',
+    title: 'Building Wrap Advertising',
+    category: 'Outdoor',
+    description: 'Complete building facade advertising covering entire exterior surface for maximum exposure.',
     client: 'Corporate Client',
   },
   {
@@ -40,9 +40,9 @@ const portfolioItems = [
   {
     id: 5,
     src: '/images/portfolio-vehicle-branding.png',
-    title: 'Vehicle Fleet Branding',
-    category: 'Branding',
-    description: 'Complete vehicle fleet branding with high-quality vinyl wraps for mobile advertising.',
+    title: 'Vehicle Fleet Advertising',
+    category: 'Outdoor',
+    description: 'Complete vehicle fleet advertising with high-quality vinyl wraps for mobile advertising.',
     client: 'Logistics Company',
   },
   {
@@ -56,14 +56,14 @@ const portfolioItems = [
   {
     id: 7,
     src: '/images/portfolio-event-branding.png',
-    title: 'Event Stage Branding',
+    title: 'Event Stage Advertising',
     category: 'Events',
-    description: 'Complete event branding including stage backdrop, entrance arch, and venue decorations.',
+    description: 'Complete event advertising including stage backdrop, entrance arch, and venue decorations.',
     client: 'Event Organizer',
   },
 ];
 
-const categories = ['All', 'Hoardings', 'Flex Printing', 'Branding', 'Digital', 'Outdoor', 'Events'];
+const categories = ['All', 'Hoardings', 'Flex Printing', 'Digital', 'Outdoor', 'Events', 'Banners'];
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -35,17 +35,17 @@ const services = [
   },
   {
     icon: Image,
-    title: 'Banner Branding',
+    title: 'Banner Advertising',
     description:
       'Eye-catching banner designs and installations for events, retail spaces, exhibitions, and promotional campaigns.',
-    features: ['Event Banners', 'Retail Branding', 'Exhibition Displays', 'Roll-up Banners'],
+    features: ['Event Banners', 'Retail Displays', 'Exhibition Displays', 'Roll-up Banners'],
   },
   {
     icon: TrendingUp,
     title: 'Promotional Advertising',
     description:
-      'End-to-end promotional campaign execution including event branding, vehicle wraps, product launches, and experiential marketing.',
-    features: ['Event Branding', 'Vehicle Wraps', 'Product Launches', 'Brand Activations'],
+      'End-to-end promotional campaign execution including event setups, vehicle wraps, product launches, and experiential marketing.',
+    features: ['Event Setup', 'Vehicle Wraps', 'Product Launches', 'Campaign Activation'],
   },
 ];
 

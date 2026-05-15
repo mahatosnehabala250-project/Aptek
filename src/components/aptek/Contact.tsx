@@ -123,7 +123,7 @@ export default function Contact() {
                       <option value="hoardings">Hoarding Advertising</option>
                       <option value="outdoor">Outdoor Advertising</option>
                       <option value="flex-printing">Flex Printing</option>
-                      <option value="banner-branding">Banner Branding</option>
+                      <option value="banner-advertising">Banner Advertising</option>
                       <option value="promotional">Promotional Advertising</option>
                       <option value="other">Other</option>
                     </select>

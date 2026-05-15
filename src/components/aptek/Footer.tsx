@@ -9,7 +9,7 @@ const footerLinks = {
     { label: 'Hoarding Advertising', href: '#services' },
     { label: 'Outdoor Advertising', href: '#services' },
     { label: 'Flex Printing', href: '#services' },
-    { label: 'Banner Branding', href: '#services' },
+    { label: 'Banner Advertising', href: '#services' },
     { label: 'Promotional Advertising', href: '#services' },
   ],
   company: [
@@ -91,9 +91,9 @@ export default function Footer() {
               A Complete AD Publicity
             </p>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Premium outdoor advertising &amp; branding solutions. Making your brand
+              Premium outdoor advertising solutions. Making your brand
               visible across India with hoardings, flex printing, and comprehensive
-              branding services.
+              advertising services.
             </p>
 
             {/* Social Media Links */}
