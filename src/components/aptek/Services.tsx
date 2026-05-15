@@ -43,7 +43,7 @@ const services = [
 
 export default function Services() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-30px' });
+  const isInView = useInView(ref, { once: true, margin: '80px' });
 
   return (
     <section id="services" className="relative py-20 md:py-28 bg-white overflow-hidden">

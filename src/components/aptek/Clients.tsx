@@ -35,7 +35,7 @@ const whyChooseUs = [
 
 export default function Clients() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-30px' });
+  const isInView = useInView(ref, { once: true, margin: '80px' });
 
   return (
     <section id="clients" className="relative py-12 sm:py-16 md:py-20 bg-white">

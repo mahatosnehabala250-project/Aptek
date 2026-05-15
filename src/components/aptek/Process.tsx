@@ -42,7 +42,7 @@ const steps = [
 
 export default function Process() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: '-30px' });
+  const isInView = useInView(sectionRef, { once: true, margin: '80px' });
 
   return (
     <section id="process" ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 bg-[#F8FAFC]">

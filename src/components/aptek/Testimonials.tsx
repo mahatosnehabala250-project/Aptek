@@ -69,7 +69,7 @@ function StarRating({ rating }: { rating: number }) {
 export default function Testimonials() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: '-30px' });
+  const isInView = useInView(sectionRef, { once: true, margin: '80px' });
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const isScrolling = useRef(false);

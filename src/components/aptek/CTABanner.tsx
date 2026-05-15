@@ -25,7 +25,7 @@ const itemVariants = {
 
 export default function CTABanner() {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-30px' });
+  const isInView = useInView(ref, { once: true, margin: '80px' });
 
   return (
     <section ref={ref} className="relative overflow-hidden">

@@ -108,7 +108,7 @@ function FAQItem({
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-30px' });
+  const isInView = useInView(ref, { once: true, margin: '80px' });
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

@@ -70,7 +70,7 @@ export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedImage, setSelectedImage] = useState<(typeof portfolioItems)[0] | null>(null);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-30px' });
+  const isInView = useInView(ref, { once: true, margin: '80px' });
 
   // Count items per category
   const categoryCounts = categories.reduce<Record<string, number>>((acc, cat) => {

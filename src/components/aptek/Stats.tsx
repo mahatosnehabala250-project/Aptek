@@ -84,7 +84,7 @@ function AnimatedCounter({ stat, isInView }: { stat: StatItem; isInView: boolean
 
 export default function Stats() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-30px' });
+  const isInView = useInView(ref, { once: true, margin: '80px' });
 
   return (
     <section className="relative py-16 md:py-20 bg-[#F8FAFC] border-y border-gray-100 overflow-hidden">
