@@ -40,7 +40,7 @@ const portfolioItems = [
 
   {
     id: 6,
-    src: '/images/portfolio-roadside-advertising.png',
+    src: '/images/portfolio-roadside-advertising.jpg',
     title: 'City-Wide Roadside Campaign',
     category: 'Outdoor',
     description: 'Comprehensive roadside advertising campaign spanning multiple locations across the city.',
