@@ -81,7 +81,7 @@ const services = [
   },
 ];
 
-export default function Services() {
+export default function Services({ showHeader = true }: { showHeader?: boolean }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '80px' });
 
@@ -93,6 +93,7 @@ export default function Services() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
+        {showHeader && (
         <div className="text-center mb-14 md:mb-20">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -121,6 +122,7 @@ export default function Services() {
             notice you before they notice your competitors.
           </motion.p>
         </div>
+        )}
 
         {/* Service Cards Grid */}
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">

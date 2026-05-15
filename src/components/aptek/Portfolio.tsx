@@ -66,7 +66,7 @@ const portfolioItems = [
 
 const categories = ['All', 'Hoardings', 'Flex Printing', 'Outdoor', 'Events'];
 
-export default function Portfolio() {
+export default function Portfolio({ showHeader = true }: { showHeader?: boolean }) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedImage, setSelectedImage] = useState<(typeof portfolioItems)[0] | null>(null);
   const ref = useRef(null);
@@ -146,6 +146,7 @@ export default function Portfolio() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
+        {showHeader && (
         <div className="text-center mb-10 md:mb-14">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -176,6 +177,7 @@ export default function Portfolio() {
             real results for businesses just like yours.
           </motion.p>
         </div>
+        )}
 
         {/* Category Filter */}
         <motion.div

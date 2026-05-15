@@ -30,7 +30,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Portfolio Component */}
-      <Portfolio />
+      <Portfolio showHeader={false} />
 
       {/* CTA Banner */}
       <CTABanner />

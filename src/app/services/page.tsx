@@ -30,7 +30,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Component */}
-      <Services />
+      <Services showHeader={false} />
 
       {/* CTA Banner */}
       <CTABanner />
