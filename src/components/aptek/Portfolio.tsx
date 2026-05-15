@@ -23,8 +23,8 @@ const portfolioItems = [
   },
   {
     id: 3,
-    src: '/images/portfolio-building-wrap.png',
-    title: 'Building Wrap Advertising',
+    src: '/images/portfolio-building-wrap.jpg',
+    title: 'Building Wrap Advertisement',
     category: 'Outdoor',
     description: 'Complete building facade advertising covering entire exterior surface for maximum exposure.',
     client: 'Corporate Client',
