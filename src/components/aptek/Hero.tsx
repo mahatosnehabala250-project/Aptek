@@ -5,22 +5,14 @@ import { ArrowRight, MessageCircle } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Clean dark background with subtle brand tint */}
-      <div className="absolute inset-0 bg-[#0a0a0a]" />
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0a0a] to-[#001a0d]" />
-
-      {/* Subtle dot grid texture for premium feel */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
-          backgroundSize: '40px 40px',
-        }}
-      />
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-white">
+      {/* Subtle green gradient accent — top right corner */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[#00A651]/5 to-transparent rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+      {/* Subtle green accent — bottom left */}
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-[#00A651]/[0.03] to-transparent rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none" />
 
       {/* Main split layout */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-0">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
 
           {/* Left side — Text Content */}
@@ -32,11 +24,11 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95] mb-6"
             >
-              <span className="text-white block">YOUR BRAND.</span>
+              <span className="text-gray-900 block">YOUR BRAND.</span>
               <span
                 className="block mt-1 md:mt-2"
                 style={{
-                  background: 'linear-gradient(135deg, #86EFAC 0%, #4ADE80 30%, #22C55E 60%, #16A34A 100%)',
+                  background: 'linear-gradient(135deg, #00A651 0%, #00C462 50%, #8BC34A 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -51,7 +43,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="text-white/55 text-base sm:text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed font-light"
+              className="text-gray-500 text-base sm:text-lg md:text-xl max-w-md mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
               India&apos;s premium outdoor advertising — from design to installation, one team.
             </motion.p>
@@ -78,7 +70,7 @@ export default function Hero() {
                   e.preventDefault();
                   document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/15 hover:border-white/30 text-white/80 font-semibold text-sm sm:text-base rounded-full transition-all duration-300 hover:bg-white/5"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gray-200 hover:border-[#00A651]/40 text-gray-700 hover:text-[#00A651] font-semibold text-sm sm:text-base rounded-full transition-all duration-300 hover:bg-[#00A651]/5"
               >
                 See Our Work
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
@@ -86,7 +78,7 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right side — SHARP Billboard Image (no blur!) */}
+          {/* Right side — SHARP Billboard Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -94,11 +86,11 @@ export default function Hero() {
             className="flex-1 w-full max-w-xl lg:max-w-none"
           >
             <div className="relative">
-              {/* Subtle brand glow behind image */}
-              <div className="absolute -inset-3 bg-gradient-to-br from-[#00A651]/15 to-transparent rounded-3xl blur-3xl" />
+              {/* Subtle green glow behind image */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-[#00A651]/10 to-[#8BC34A]/5 rounded-3xl blur-3xl" />
 
               {/* Image frame — crystal clear, NO blur */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/60 border border-white/[0.08] bg-[#111]">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-gray-200/60 border border-gray-100 bg-gray-50">
                 <img
                   src="/images/hero-bg.jpg"
                   alt="APTEK MEDIA — Billboard Outdoor Advertising Work"
@@ -115,19 +107,19 @@ export default function Hero() {
       {/* Minimal scroll hint */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.35 }}
+        animate={{ opacity: 0.3 }}
         transition={{ delay: 1.2, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
-          className="w-5 h-8 rounded-full border border-white/12 flex items-start justify-center p-1.5"
+          className="w-5 h-8 rounded-full border border-gray-300 flex items-start justify-center p-1.5"
         >
           <motion.div
             animate={{ opacity: [0.5, 0.15, 0.5] }}
             transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
-            className="w-1 h-1 rounded-full bg-white/40"
+            className="w-1 h-1 rounded-full bg-gray-400"
           />
         </motion.div>
       </motion.div>

@@ -18,7 +18,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -38,12 +38,9 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? 'navbar-blur bg-white/90 shadow-sm'
-            : 'bg-transparent'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 navbar-blur ${
+          isScrolled ? 'bg-white/95 shadow-sm' : 'bg-white/80'
         }`}
-        style={!isScrolled ? { textShadow: '0 1px 6px rgba(0,0,0,0.4)' } : undefined}
       >
         {/* Green gradient border-bottom when scrolled */}
         {isScrolled && (
@@ -75,7 +72,7 @@ export default function Navbar() {
                   </svg>
                 </div>
                 <div className="flex flex-col leading-none">
-                  <span className={`text-xl md:text-2xl font-black tracking-tight transition-colors duration-300 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+                  <span className="text-xl md:text-2xl font-black tracking-tight text-gray-900">
                     APTEK
                   </span>
                   <span className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-[#00A651] uppercase">
@@ -95,11 +92,7 @@ export default function Navbar() {
                     e.preventDefault();
                     handleNavClick(link.href);
                   }}
-                  className={`px-4 py-2 text-sm font-medium transition-colors duration-300 relative group ${
-                    isScrolled
-                      ? 'text-gray-600 hover:text-[#00A651]'
-                      : 'text-white hover:text-white'
-                  }`}
+                  className="px-4 py-2 text-sm font-medium transition-colors duration-300 relative group text-gray-600 hover:text-[#00A651]"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#00A651] group-hover:w-full transition-all duration-300" />
@@ -125,9 +118,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-gray-900 bg-gray-100/80 backdrop-blur-sm' : 'text-white/80 hover:text-white'
-              }`}
+              className="md:hidden p-2 rounded-lg transition-colors text-gray-700 hover:text-gray-900 bg-gray-100/80 backdrop-blur-sm"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
