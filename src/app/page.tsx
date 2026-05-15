@@ -3,6 +3,7 @@
 import Hero from '@/components/aptek/Hero';
 import Stats from '@/components/aptek/Stats';
 import Services from '@/components/aptek/Services';
+import Portfolio from '@/components/aptek/Portfolio';
 import CTABanner from '@/components/aptek/CTABanner';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
+      <Portfolio />
       <CTABanner />
     </>
   );
