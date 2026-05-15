@@ -38,7 +38,7 @@ export default function Clients() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="clients" className="relative py-20 md:py-28 bg-white">
+    <section id="clients" className="relative py-16 md:py-24 bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14 md:mb-20">
@@ -98,9 +98,9 @@ export default function Clients() {
         </div>
 
         {/* Why Choose Us */}
-        <div className="section-divider mb-16 md:mb-20" />
+        <div className="section-divider mb-10 md:mb-14" />
 
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-8 md:mb-10">
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

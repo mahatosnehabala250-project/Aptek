@@ -44,7 +44,7 @@ export default function Process() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="process" className="relative py-20 md:py-28 bg-[#F8FAFC]">
+    <section id="process" className="relative py-16 md:py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14 md:mb-20">
