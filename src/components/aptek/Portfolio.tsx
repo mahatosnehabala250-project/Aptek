@@ -54,6 +54,14 @@ const portfolioItems = [
     client: 'FMCG Brand',
   },
   {
+    id: 8,
+    src: '/images/portfolio-outdoor-photo-1.jpg',
+    title: 'Outdoor Hoarding Installation',
+    category: 'Outdoor',
+    description: 'Professional hoarding installation at prime location for maximum brand visibility and impact.',
+    client: 'Local Business',
+  },
+  {
     id: 7,
     src: '/images/portfolio-event-branding.png',
     title: 'Event Stage Advertising',
