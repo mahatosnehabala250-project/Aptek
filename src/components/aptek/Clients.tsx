@@ -35,10 +35,10 @@ const whyChooseUs = [
 
 export default function Clients() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-30px' });
 
   return (
-    <section id="clients" className="relative py-8 md:py-10 bg-white">
+    <section id="clients" className="relative py-12 sm:py-16 md:py-20 bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6 md:mb-8">
@@ -77,7 +77,7 @@ export default function Clients() {
               key={client.abbr}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
+              transition={{ duration: 0.4, delay: 0.06 * i }}
               className="group relative rounded-2xl p-6 md:p-8 bg-[#F8FAFC] border border-gray-100 hover:border-[#00A651]/20 transition-all duration-500 text-center overflow-hidden group-hover:scale-[1.02] group-hover:shadow-md"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-[#F0FDF4] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -117,7 +117,7 @@ export default function Clients() {
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i + 0.3 }}
+              transition={{ duration: 0.4, delay: 0.05 * i + 0.15 }}
               className="text-center p-5 md:p-6 rounded-xl bg-[#F8FAFC] border border-gray-100 hover:shadow-md transition-shadow duration-300"
             >
               <div className="flex items-center justify-center gap-2 mb-3">

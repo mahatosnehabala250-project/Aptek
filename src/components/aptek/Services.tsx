@@ -51,7 +51,7 @@ const services = [
 
 export default function Services() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-30px' });
 
   return (
     <section id="services" className="relative py-20 md:py-28 bg-white overflow-hidden">
@@ -97,7 +97,7 @@ export default function Services() {
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
+              transition={{ duration: 0.4, delay: 0.06 * i }}
               className={`service-card rounded-2xl p-6 md:p-8 bg-white group relative overflow-hidden shadow-sm group-hover:shadow-xl group-hover:shadow-[#00A651]/5 border border-gray-100/80 transition-all duration-300 group-hover:-translate-y-1 ${
                 i === 4 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}

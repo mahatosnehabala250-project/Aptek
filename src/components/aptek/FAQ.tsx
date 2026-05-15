@@ -108,14 +108,14 @@ function FAQItem({
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-30px' });
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="relative py-8 md:py-10 bg-white">
+    <section id="faq" className="relative py-12 sm:py-16 md:py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-6 md:mb-8">

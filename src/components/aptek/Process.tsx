@@ -42,10 +42,10 @@ const steps = [
 
 export default function Process() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
+  const isInView = useInView(sectionRef, { once: true, margin: '-30px' });
 
   return (
-    <section id="process" ref={sectionRef} className="relative py-8 md:py-10 bg-[#F8FAFC]">
+    <section id="process" ref={sectionRef} className="relative py-12 sm:py-16 md:py-20 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header — StoryBrand Element #4: The Plan */}
         <div className="text-center mb-6 md:mb-8">
@@ -89,7 +89,7 @@ export default function Process() {
                   key={step.number}
                   initial={{ opacity: 0, y: 40 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.15 * i + 0.2 }}
+                  transition={{ duration: 0.4, delay: 0.1 * i + 0.1 }}
                   className={`text-center relative ${
                     i % 2 === 1 ? 'mt-16' : ''
                   }`}
@@ -145,7 +145,7 @@ export default function Process() {
               key={step.number}
               initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 * i + 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 * i + 0.1 }}
               className="relative flex gap-5 md:gap-6"
             >
               {/* Vertical Line + Dot */}

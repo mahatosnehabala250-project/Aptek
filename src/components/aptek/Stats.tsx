@@ -84,7 +84,7 @@ function AnimatedCounter({ stat, isInView }: { stat: StatItem; isInView: boolean
 
 export default function Stats() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-30px' });
 
   return (
     <section className="relative py-16 md:py-20 bg-[#F8FAFC] border-y border-gray-100 overflow-hidden">
@@ -112,8 +112,8 @@ export default function Stats() {
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{
-                duration: 0.5,
-                delay: i * 0.12,
+                duration: 0.4,
+                delay: i * 0.08,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}
               className="relative"
