@@ -4,36 +4,37 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MessageSquare, Palette, Printer, Rocket } from 'lucide-react';
 
+// StoryBrand Element #4: THE PLAN — clear steps showing customer's journey
 const steps = [
   {
     number: '01',
-    title: 'Consultation & Planning',
+    title: 'Tell Us Your Goal',
     description:
-      'We begin by understanding your brand, goals, target audience, and budget. Our team conducts a thorough site survey and develops a strategic outdoor advertising plan tailored to your needs.',
+      'Share your brand, budget, and target audience. We listen first — then our team surveys the best locations across India to create a strategic plan that puts your brand where it matters most.',
     icon: MessageSquare,
     color: '#00A651',
   },
   {
     number: '02',
-    title: 'Design & Creative',
+    title: 'We Design Your Impact',
     description:
-      'Our creative team designs eye-catching visuals and compelling ad copy that align with your brand identity. We provide mockups and revisions until you\'re completely satisfied.',
+      'Our creative team designs bold, eye-catching visuals that stop people in their tracks. You get mockups, revisions, and a design that\'s 100% optimized for outdoor viewing distances — until you love it.',
     icon: Palette,
     color: '#8BC34A',
   },
   {
     number: '03',
-    title: 'Production & Printing',
+    title: 'We Print & Produce',
     description:
-      'We use state-of-the-art large format printing technology and premium materials to produce high-quality flex, vinyl, and backlit panels with vivid, long-lasting colors.',
+      'Premium large-format printing with vivid, weather-resistant colors. From flex and vinyl to backlit panels — we use the best materials so your campaign looks stunning for months, not days.',
     icon: Printer,
     color: '#00A651',
   },
   {
     number: '04',
-    title: 'Installation & Launch',
+    title: 'Your Brand Goes Live',
     description:
-      'Our experienced installation team handles the complete setup at your chosen locations. We ensure perfect mounting, lighting, and a flawless campaign launch on schedule.',
+      'Our expert installation team handles everything — mounting, lighting, and perfect placement. Your brand launches on schedule, and you start getting noticed from Day 1.',
     icon: Rocket,
     color: '#8BC34A',
   },
@@ -46,7 +47,7 @@ export default function Process() {
   return (
     <section id="process" ref={sectionRef} className="relative py-8 md:py-10 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section Header — StoryBrand Element #4: The Plan */}
         <div className="text-center mb-6 md:mb-8">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
@@ -54,7 +55,7 @@ export default function Process() {
             transition={{ duration: 0.5 }}
             className="inline-block text-[#00A651] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
           >
-            Our Process
+            Your Roadmap to Success
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -62,8 +63,8 @@ export default function Process() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 heading-gradient-wrap"
           >
-            {'How We '}
-            <span className="text-gradient-brand">{'Work'}</span>
+            {'4 Simple Steps to '}
+            <span className="text-gradient-brand">{'Launch Your Campaign'}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -71,8 +72,8 @@ export default function Process() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            A simple, streamlined process that takes your brand from concept to campaign
-            — delivered on time, every time.
+            No complexity, no confusion. You tell us your goal — we handle everything else.
+            Here&apos;s exactly how your brand goes from idea to reality.
           </motion.p>
         </div>
 

@@ -13,23 +13,23 @@ const clients = [
 const whyChooseUs = [
   {
     icon: Award,
-    title: 'Proven Track Record',
-    description: 'Over a decade of excellence in outdoor advertising with 500+ successfully completed projects.',
+    title: '10+ Years of Experience',
+    description: 'Over a decade helping businesses grow through outdoor advertising. We know what works — and what doesn\'t.',
   },
   {
     icon: Users,
-    title: 'Trusted by Brands',
-    description: 'Partnered with premium national brands including DPS, PNB, and Shyam Steel.',
+    title: '500+ Successful Campaigns',
+    description: 'From schools to banks to steel companies — we\'ve helped businesses of every size get noticed across India.',
   },
   {
     icon: Shield,
-    title: 'Premium Quality',
-    description: 'We use only the highest quality materials and printing technology for lasting impact.',
+    title: 'Zero Hassle for You',
+    description: 'Design, printing, installation — we handle everything. You focus on running your business, we handle the rest.',
   },
   {
     icon: Zap,
-    title: 'Quick Turnaround',
-    description: 'Fast execution with dedicated project management to meet your campaign deadlines.',
+    title: 'Results in Days, Not Weeks',
+    description: 'Need it fast? Our express service gets your brand live in as little as 3 days. Standard campaigns launch in 5-7 days.',
   },
 ];
 

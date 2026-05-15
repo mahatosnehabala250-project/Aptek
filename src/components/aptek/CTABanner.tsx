@@ -60,30 +60,30 @@ export default function CTABanner() {
         animate={isInView ? 'visible' : 'hidden'}
         className="relative z-10 py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center"
       >
-        {/* Label */}
+        {/* Label — StoryBrand Element #6: Urgency/Action */}
         <motion.span
           variants={itemVariants}
           className="inline-block text-white/70 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-4 md:mb-5"
         >
-          READY TO GET STARTED?
+          DON'T WAIT — YOUR COMPETITORS AREN'T
         </motion.span>
 
-        {/* Heading */}
+        {/* Heading — StoryBrand Element #7: Success Vision */}
         <motion.h2
           variants={itemVariants}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-black tracking-tight text-white leading-[1.1] mb-5 md:mb-6"
         >
-          Let&apos;s Make Your Brand{' '}
-          <span className="text-white/90">Unmissable</span>
+          Your Brand Could Be Seen by{' '}
+          <span className="text-white/90">Millions Tomorrow</span>
         </motion.h2>
 
-        {/* Subtitle */}
+        {/* Subtitle — StoryBrand Element #3: Guide + #6: Failure Avoidance */}
         <motion.p
           variants={itemVariants}
           className="text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10"
         >
-          Join 500+ brands who trust APTEK MEDIA for their outdoor advertising
-          needs. Get a free consultation today.
+          500+ brands already chose APTEK MEDIA to make their brand impossible to
+          ignore. Get a free, no-obligation quote today — and start getting noticed.
         </motion.p>
 
         {/* CTA Buttons */}

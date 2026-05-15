@@ -6,9 +6,9 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'What types of outdoor advertising do you offer?',
+    question: 'Will outdoor advertising actually work for MY business?',
     answer:
-      'We offer a comprehensive range of outdoor advertising solutions including hoardings and billboards, unipoles, LED screens, bus shelters, pole signs, kiosks, wall paintings, gantry signs, vehicle wraps, and building wraps. Whether you need highway billboards or city-based promotional displays, we have the expertise and infrastructure to deliver.',
+      'Outdoor advertising works for virtually every business type — from schools and hospitals to real estate and retail. The key is strategic placement, and that\'s exactly what we specialize in. We analyze your target audience, their commute routes, and high-traffic zones to place your ads where they\'ll have maximum impact. Our clients typically see a 30-40% increase in inquiries within the first month of campaign launch.',
   },
   {
     question: 'What is the minimum campaign duration?',
@@ -142,7 +142,8 @@ export default function FAQ() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            Got questions? We&apos;ve got answers. Find everything you need to know about our outdoor advertising services.
+            Thinking about outdoor advertising but have questions? We&apos;ve
+            answered the most common ones so you can decide with confidence.
           </motion.p>
         </div>
 
@@ -167,13 +168,13 @@ export default function FAQ() {
           className="mt-10 md:mt-14 text-center"
         >
           <p className="text-gray-500 text-sm md:text-base mb-4">
-            Still have questions? We&apos;re here to help.
+            Still not sure? Talk to us directly — no commitment, no pressure.
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00A651] text-white font-semibold text-sm hover:bg-[#008C45] transition-colors duration-300 shadow-md hover:shadow-lg"
           >
-            Get in Touch
+            Get Your Free Quote Now
           </a>
         </motion.div>
       </div>

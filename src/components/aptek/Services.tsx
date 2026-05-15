@@ -68,7 +68,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="inline-block text-[#00A651] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4"
           >
-            What We Offer
+            How We Help You Grow
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -85,8 +85,8 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            Comprehensive outdoor advertising solutions designed to make your brand
-            the center of attention everywhere.
+            Every service designed to solve one problem — making sure your customers
+            notice you before they notice your competitors.
           </motion.p>
         </div>
 

@@ -148,8 +148,8 @@ export default function Testimonials() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            Don&apos;t just take our word for it — hear from the brands we&apos;ve helped grow through
-            powerful outdoor advertising.
+            Real results from real businesses. Here&apos;s what happened when they
+            chose APTEK MEDIA to make their brand visible.
           </motion.p>
         </div>
 

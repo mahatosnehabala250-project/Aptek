@@ -171,8 +171,8 @@ export default function Portfolio() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            Every project is a testament to our commitment to excellence. Explore our
-            portfolio of successfully executed outdoor advertising campaigns.
+            See what we can do for your brand. These are real campaigns that delivered
+            real results for businesses just like yours.
           </motion.p>
         </div>
 

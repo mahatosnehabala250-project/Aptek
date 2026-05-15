@@ -91,9 +91,9 @@ export default function Footer() {
               A Complete AD Publicity
             </p>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Premium outdoor advertising solutions. Making your brand
-              visible across India with hoardings, flex printing, and comprehensive
-              advertising services.
+              We help businesses across India get seen by millions every day.
+              From hoardings to billboards to city displays — one team, one call,
+              your brand everywhere that matters.
             </p>
 
             {/* Social Media Links */}

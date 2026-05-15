@@ -100,7 +100,7 @@ export default function Stats() {
           className="text-center mb-10 md:mb-12"
         >
           <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#00A651] bg-[#00A651]/8 px-4 py-1.5 rounded-full">
-            Our Impact
+            Why Businesses Trust Us
           </span>
         </motion.div>
 

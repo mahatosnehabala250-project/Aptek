@@ -71,8 +71,8 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 md:mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
           >
-            Ready to make your brand unmissable? Reach out to us and let&apos;s
-            discuss how we can elevate your outdoor advertising.
+            Tell us about your brand and your goals. We&apos;ll get back to you
+            within 2 hours with a free, customized advertising plan for your business.
           </motion.p>
         </div>
 
