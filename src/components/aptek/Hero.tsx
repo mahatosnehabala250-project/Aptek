@@ -6,12 +6,12 @@ import { ArrowDown } from 'lucide-react';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Ken Burns effect */}
+      {/* Background Image - Static */}
       <div className="absolute inset-0">
         <img
           src="/images/hero-bg.jpg"
           alt="APTEK MEDIA Outdoor Advertising"
-          className="w-full h-full object-cover scale-105 animate-[kenburns_20s_ease-in-out_infinite_alternate]"
+          className="w-full h-full object-cover"
         />
         <div className="hero-gradient absolute inset-0" />
         {/* Extra dark overlay to dim bright billboards */}
