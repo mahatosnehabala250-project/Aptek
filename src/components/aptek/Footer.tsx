@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 
@@ -20,12 +21,19 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const [isScrolling, setIsScrolling] = useState(false);
+
   const scrollToTop = () => {
+    setIsScrolling(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => setIsScrolling(false), 600);
   };
 
   return (
-    <footer className="relative bg-[#1A1A2E] border-t border-white/5">
+    <footer className="relative bg-[#1A1A2E]">
+      {/* Gradient line at the top */}
+      <div className="h-1 bg-gradient-to-r from-[#00A651] via-[#00C462] to-[#8BC34A]" />
+
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
@@ -76,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-gray-400 text-sm hover:text-[#00A651] transition-colors duration-300">{link.label}</a>
+                  <a href={link.href} className="text-gray-400 text-sm hover:text-[#00A651] transition-all duration-300 hover:pl-2 border-l-2 border-transparent hover:border-[#00A651] pl-0">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -88,7 +96,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-gray-400 text-sm hover:text-[#00A651] transition-colors duration-300">{link.label}</a>
+                  <a href={link.href} className="text-gray-400 text-sm hover:text-[#00A651] transition-all duration-300 hover:pl-2 border-l-2 border-transparent hover:border-[#00A651] pl-0">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -113,13 +121,15 @@ export default function Footer() {
           <p className="text-gray-500 text-xs md:text-sm">
             &copy; {new Date().getFullYear()} APTEK Media. All rights reserved. | A Complete AD Publicity
           </p>
-          <button
+          <motion.button
             onClick={scrollToTop}
-            className="p-2 rounded-lg bg-white/5 hover:bg-[#00A651]/20 text-gray-400 hover:text-[#00A651] transition-all duration-300"
+            animate={{ y: isScrolling ? -4 : 0 }}
+            transition={{ duration: 0.3, repeat: isScrolling ? Infinity : 0, repeatType: 'reverse' }}
+            className="p-2.5 rounded-full bg-white/5 hover:bg-[#00A651]/20 text-gray-400 hover:text-[#00A651] transition-all duration-300 hover:shadow-lg hover:shadow-[#00A651]/10"
             aria-label="Scroll to top"
           >
             <ArrowUp size={16} />
-          </button>
+          </motion.button>
         </div>
       </div>
     </footer>

@@ -106,7 +106,7 @@ export default function Portfolio() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900"
           >
-            Real <span className="text-gradient-brand">Work</span>, Real{' '}
+            Real{' '}<span className="text-gradient-brand">Work</span>, Real{' '}
             <span className="text-gradient-brand">Impact</span>
           </motion.h2>
           <motion.p
@@ -131,13 +131,17 @@ export default function Portfolio() {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-medium rounded-lg transition-all duration-300 ${
+              className={`px-4 py-2 md:px-5 md:py-2.5 text-xs md:text-sm font-medium rounded-lg transition-all duration-300 relative ${
                 selectedCategory === cat
                   ? 'bg-[#00A651] text-white shadow-lg shadow-[#00A651]/20'
                   : 'bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-700 border border-gray-200'
               }`}
             >
               {cat}
+              {/* Active gradient border */}
+              {selectedCategory === cat && (
+                <span className="absolute inset-0 rounded-lg gradient-border pointer-events-none" />
+              )}
             </button>
           ))}
         </motion.div>
@@ -152,7 +156,7 @@ export default function Portfolio() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="gallery-item cursor-pointer group"
                 onClick={() => setSelectedImage(item)}
               >
@@ -163,6 +167,10 @@ export default function Portfolio() {
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
+                  {/* Category badge - top right */}
+                  <div className="absolute top-3 right-3 z-10 px-2.5 py-1 bg-[#00A651]/90 backdrop-blur-sm text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
+                    {item.category}
+                  </div>
                   {/* Hover Overlay */}
                   <div className="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-4 md:p-6">
                     <span className="text-[#00C462] text-xs font-semibold uppercase tracking-wider mb-1">
@@ -177,6 +185,13 @@ export default function Portfolio() {
                     <div className="mt-3 flex items-center gap-2 text-[#00C462] text-xs font-medium">
                       <span>View Details</span>
                       <ExternalLink size={12} />
+                    </div>
+                  </div>
+                  {/* "View All" label overlay on hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="flex items-center gap-2 bg-white/95 backdrop-blur-sm text-gray-800 px-4 py-2 rounded-lg shadow-lg">
+                      <ExternalLink size={14} className="text-[#00A651]" />
+                      <span className="text-xs font-semibold">View Project</span>
                     </div>
                   </div>
                 </div>
@@ -227,12 +242,13 @@ export default function Portfolio() {
               className="relative max-w-5xl w-full max-h-[90vh] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Close button - bigger with bg-white/10 rounded-full */}
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 p-2 text-white/60 hover:text-white transition-colors z-10"
+                className="absolute -top-14 right-0 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition-all duration-300 z-10"
                 aria-label="Close modal"
               >
-                <X size={28} />
+                <X size={20} />
               </button>
               <div className="relative rounded-xl overflow-hidden bg-gray-900 flex-shrink-0">
                 <img
@@ -261,7 +277,7 @@ export default function Portfolio() {
                 <button onClick={(e) => { e.stopPropagation(); navigateImage('prev'); }} className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors" aria-label="Previous image">
                   <ChevronLeft size={20} />
                 </button>
-                <span className="text-gray-400 text-sm">
+                <span className="text-gray-400 text-sm tabular-nums">
                   {filteredItems.findIndex((item) => item.id === selectedImage.id) + 1} / {filteredItems.length}
                 </span>
                 <button onClick={(e) => { e.stopPropagation(); navigateImage('next'); }} className="p-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors" aria-label="Next image">

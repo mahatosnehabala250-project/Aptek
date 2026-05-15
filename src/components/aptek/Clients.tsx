@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Award, Users, Shield, Zap } from 'lucide-react';
+import { Award, Users, Shield, Zap, CheckCircle } from 'lucide-react';
 
 const clients = [
   { name: 'Delhi Public School', abbr: 'DPS', description: 'India\'s Premier Educational Institution' },
@@ -78,7 +78,7 @@ export default function Clients() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="group relative rounded-2xl p-6 md:p-8 bg-[#F8FAFC] border border-gray-100 hover:border-[#00A651]/20 transition-all duration-500 text-center overflow-hidden"
+              className="group relative rounded-2xl p-6 md:p-8 bg-[#F8FAFC] border border-gray-100 hover:border-[#00A651]/20 transition-all duration-500 text-center overflow-hidden group-hover:scale-[1.02] group-hover:shadow-md"
             >
               <div className="absolute inset-0 bg-gradient-to-b from-[#F0FDF4] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -105,7 +105,7 @@ export default function Clients() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 inline-block border-l-4 border-[#00A651] pl-4"
           >
             Why Choose <span className="text-gradient-brand">APTEK MEDIA</span>?
           </motion.h3>
@@ -118,10 +118,13 @@ export default function Clients() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i + 0.3 }}
-              className="text-center p-5 md:p-6 rounded-xl bg-[#F8FAFC] border border-gray-100"
+              className="text-center p-5 md:p-6 rounded-xl bg-[#F8FAFC] border border-gray-100 hover:shadow-md transition-shadow duration-300"
             >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-[#F0FDF4] flex items-center justify-center">
-                <item.icon className="w-6 h-6 text-[#00A651]" />
+              <div className="flex items-center justify-center gap-2 mb-3">
+                <div className="w-12 h-12 mx-auto rounded-xl bg-[#F0FDF4] flex items-center justify-center">
+                  <item.icon className="w-6 h-6 text-[#00A651]" />
+                </div>
+                <CheckCircle size={20} className="text-[#00A651] opacity-60" />
               </div>
               <h4 className="text-gray-900 font-bold text-base md:text-lg mb-2">{item.title}</h4>
               <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>

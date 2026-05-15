@@ -40,11 +40,16 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'navbar-blur bg-white/90 border-b border-gray-100 shadow-sm'
+            ? 'navbar-blur bg-white/90 shadow-sm'
             : 'bg-transparent'
         }`}
         style={!isScrolled ? { textShadow: '0 1px 6px rgba(0,0,0,0.4)' } : undefined}
       >
+        {/* Green gradient border-bottom when scrolled */}
+        {isScrolled && (
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00A651]/40 to-transparent" />
+        )}
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
@@ -120,8 +125,8 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden p-2 transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/80 hover:text-white'
+              className={`md:hidden p-2 rounded-lg transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-gray-900 bg-gray-100/80 backdrop-blur-sm' : 'text-white/80 hover:text-white'
               }`}
               aria-label="Toggle menu"
             >
@@ -141,6 +146,15 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 pt-20 bg-white/98 navbar-blur md:hidden"
           >
+            {/* Close button with backdrop */}
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="absolute top-5 right-5 p-2.5 rounded-full bg-gray-100 text-gray-600 hover:text-gray-900 hover:bg-gray-200 transition-colors"
+              aria-label="Close menu"
+            >
+              <X size={20} />
+            </button>
+
             <div className="flex flex-col items-center gap-2 p-6">
               <div className="flex items-center mb-6">
                 <div className="w-7 h-7 mr-1.5 flex items-center justify-center">

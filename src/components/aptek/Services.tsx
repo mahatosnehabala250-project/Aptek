@@ -8,6 +8,7 @@ import {
   PanelTop,
   Image,
   TrendingUp,
+  ArrowRight,
 } from 'lucide-react';
 
 const services = [
@@ -53,7 +54,11 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="services" className="relative py-20 md:py-28 bg-white">
+    <section id="services" className="relative py-20 md:py-28 bg-white overflow-hidden">
+      {/* Decorative green gradient blob */}
+      <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#00A651]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#8BC34A]/5 rounded-full blur-3xl pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14 md:mb-20">
@@ -92,35 +97,46 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
-              className={`service-card rounded-2xl p-6 md:p-8 bg-white group ${
+              className={`service-card rounded-2xl p-6 md:p-8 bg-white group relative overflow-hidden group-hover:shadow-xl group-hover:shadow-[#00A651]/5 ${
                 i === 4 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
-              {/* Icon */}
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/10 transition-colors duration-300">
-                <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#00A651]" />
-              </div>
+              {/* Subtle gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F0FDF4]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                {service.title}
-              </h3>
+              <div className="relative z-10">
+                {/* Icon */}
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-[#F0FDF4] flex items-center justify-center mb-5 md:mb-6 group-hover:bg-[#00A651]/10 transition-colors duration-300">
+                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-[#00A651]" />
+                </div>
 
-              {/* Description */}
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
-                {service.description}
-              </p>
+                {/* Title */}
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
 
-              {/* Features */}
-              <div className="flex flex-wrap gap-2">
-                {service.features.map((feature) => (
-                  <span
-                    key={feature}
-                    className="px-3 py-1 text-xs font-medium text-[#008C45] bg-[#F0FDF4] rounded-full"
-                  >
-                    {feature}
-                  </span>
-                ))}
+                {/* Description */}
+                <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-5">
+                  {service.description}
+                </p>
+
+                {/* Features */}
+                <div className="flex flex-wrap gap-2">
+                  {service.features.map((feature) => (
+                    <span
+                      key={feature}
+                      className="px-3 py-1 text-xs font-medium text-[#008C45] bg-[#F0FDF4] rounded-full transition-colors duration-300 hover:bg-[#00A651]/10 hover:text-[#008C45]"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Arrow icon on hover */}
+                <div className="mt-5 flex items-center text-[#00A651] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                  <span className="text-sm font-semibold mr-1">Learn more</span>
+                  <ArrowRight size={16} />
+                </div>
               </div>
             </motion.div>
           ))}
