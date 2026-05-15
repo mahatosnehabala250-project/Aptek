@@ -71,11 +71,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-white text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed tracking-wide"
-          style={{ textShadow: '0 2px 15px rgba(0,0,0,0.8), 0 1px 6px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.3)' }}
+          className="text-white text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed tracking-wide font-semibold"
+          style={{ textShadow: '0 3px 20px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5), 0 0 40px rgba(0,0,0,0.3)' }}
         >
-          Premium outdoor advertising solutions that make your brand impossible to ignore.
-          From highway hoardings to city-wide branding — we make your brand visible.
+          <span className="inline-block bg-black/25 backdrop-blur-sm rounded-xl px-5 py-3">
+            Premium outdoor advertising solutions that make your brand impossible to ignore.
+            <br className="hidden sm:block" />{' '}
+            From highway hoardings to city-wide branding — we make your brand visible.
+          </span>
         </motion.p>
 
         {/* CTA Buttons */}
