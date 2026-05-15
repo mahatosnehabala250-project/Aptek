@@ -63,7 +63,7 @@ const portfolioItems = [
   },
 ];
 
-const categories = ['All', 'Hoardings', 'Flex Printing', 'Digital', 'Outdoor', 'Events', 'Banners'];
+const categories = ['All', 'Hoardings', 'Flex Printing', 'Digital', 'Outdoor', 'Events'];
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -180,7 +180,7 @@ export default function Portfolio() {
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.4, delay: 0.15 }}
           className="flex flex-col items-center gap-3 md:gap-4 mb-10 md:mb-14"
         >
           <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
@@ -288,13 +288,13 @@ export default function Portfolio() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, delay: i * 0.07 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
                     className={`gallery-item cursor-pointer group ${
                       isOddCount && i === filteredItems.length - 1 ? 'sm:col-span-1 lg:col-span-1 lg:max-w-[calc(33.333%-1.25rem)]' : ''
                     }`}
                     onClick={() => setSelectedImage(item)}
                   >
-                    <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-gray-100">
+                    <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100">
                       {/* Image with zoom on hover */}
                       <img
                         src={item.src}
@@ -303,23 +303,23 @@ export default function Portfolio() {
                         loading="lazy"
                       />
                       {/* Category badge - top right */}
-                      <div className="absolute top-3 right-3 z-10 px-2.5 py-1 bg-[#00A651]/90 backdrop-blur-sm text-white text-[10px] font-semibold uppercase tracking-wider rounded-md">
+                      <div className="absolute top-2.5 right-2.5 z-10 px-2 py-0.5 bg-[#00A651]/90 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider rounded-md">
                         {item.category}
                       </div>
-                      {/* Hover Overlay */}
-                      <div className="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-4 md:p-6">
-                        <span className="text-[#00C462] text-xs font-semibold uppercase tracking-wider mb-1">
+                      {/* Hover Overlay — always visible on mobile touch, hover on desktop */}
+                      <div className="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4 md:p-6">
+                        <span className="text-[#00C462] text-[10px] sm:text-xs font-semibold uppercase tracking-wider mb-0.5 sm:mb-1">
                           {item.category}
                         </span>
-                        <h3 className="text-white text-base md:text-lg font-bold mb-1">
+                        <h3 className="text-white text-sm sm:text-base md:text-lg font-bold mb-0.5 sm:mb-1">
                           {item.title}
                         </h3>
                         <p className="text-gray-300 text-xs md:text-sm hidden sm:block">
                           {item.description}
                         </p>
-                        <div className="mt-3 flex items-center gap-2 text-[#00C462] text-xs font-medium">
+                        <div className="mt-2 sm:mt-3 flex items-center gap-1.5 text-[#00C462] text-[11px] sm:text-xs font-medium">
                           <span>View Details</span>
-                          <ExternalLink size={12} />
+                          <ExternalLink size={11} />
                         </div>
                       </div>
                       {/* "View All" label overlay on hover */}
@@ -379,10 +379,10 @@ export default function Portfolio() {
               className="relative max-w-5xl w-full max-h-[90vh] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close button */}
+              {/* Close button — top right, easy to reach on mobile */}
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute -top-14 right-0 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white/60 hover:text-white transition-all duration-300 z-10"
+                className="absolute top-2 right-2 sm:-top-12 sm:right-0 w-10 h-10 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/25 text-white/70 hover:text-white transition-all duration-300 z-10"
                 aria-label="Close modal"
               >
                 <X size={20} />
@@ -391,7 +391,7 @@ export default function Portfolio() {
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.title}
-                  className="w-full max-h-[60vh] object-contain"
+                  className="w-full max-h-[50vh] sm:max-h-[60vh] object-contain"
                 />
               </div>
               {/* Info area */}
