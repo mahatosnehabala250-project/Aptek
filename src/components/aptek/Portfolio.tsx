@@ -14,6 +14,14 @@ const portfolioItems = [
     client: 'National Brand Campaign',
   },
   {
+    id: 9,
+    src: '/images/portfolio-hoarding-2.jpg',
+    title: 'City Hoarding Display',
+    category: 'Hoardings',
+    description: 'Premium hoarding display at prime city location for maximum brand visibility and audience reach.',
+    client: 'Local Brand',
+  },
+  {
     id: 2,
     src: '/images/portfolio-flex-printing.png',
     title: 'Large Format Flex Printing',
