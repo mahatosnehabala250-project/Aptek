@@ -1,26 +1,27 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowUp, Instagram, Facebook, Linkedin, Youtube, MapPin, Phone, Mail } from 'lucide-react';
 
 const footerLinks = {
   services: [
-    { label: 'Hoardings', href: '#services' },
-    { label: 'Outdoor Advertising', href: '#services' },
-    { label: 'Flex Printing', href: '#services' },
-    { label: 'Shop Branding', href: '#services' },
-    { label: 'Banner Printing', href: '#services' },
-    { label: 'Event Branding', href: '#services' },
-    { label: 'Political Campaign Branding', href: '#services' },
-    { label: 'Billboard Installation', href: '#services' },
-    { label: 'LED Sign Boards', href: '#services' },
+    { label: 'Hoardings', href: '/services' },
+    { label: 'Outdoor Advertising', href: '/services' },
+    { label: 'Flex Printing', href: '/services' },
+    { label: 'Shop Branding', href: '/services' },
+    { label: 'Banner Printing', href: '/services' },
+    { label: 'Event Branding', href: '/services' },
+    { label: 'Political Campaign Branding', href: '/services' },
+    { label: 'Billboard Installation', href: '/services' },
+    { label: 'LED Sign Boards', href: '/services' },
   ],
   company: [
-    { label: 'About APTEK Media', href: '#clients' },
-    { label: 'Our Portfolio', href: '#portfolio' },
-    { label: 'Our Clients', href: '#clients' },
-    { label: 'Contact Us', href: '#contact' },
+    { label: 'About APTEK Media', href: '/about' },
+    { label: 'Our Portfolio', href: '/portfolio' },
+    { label: 'Our Clients', href: '/about' },
+    { label: 'Contact Us', href: '/contact' },
   ],
 };
 
@@ -56,13 +57,6 @@ export default function Footer() {
     setTimeout(() => setIsScrolling(false), 600);
   };
 
-  const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="relative bg-[#1A1A2E]">
       {/* Gradient line at the top */}
@@ -73,7 +67,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <a href="#home" className="inline-flex items-center gap-2 mb-5" onClick={(e) => { e.preventDefault(); scrollToTop(); }}>
+            <Link href="/" className="inline-flex items-center gap-2 mb-5">
               <div className="w-8 h-8 flex items-center justify-center">
                 <svg viewBox="0 0 40 40" className="w-full h-full">
                   <defs>
@@ -90,7 +84,7 @@ export default function Footer() {
                 <span className="text-xl font-black tracking-tight text-white">APTEK</span>
                 <span className="text-[9px] font-bold tracking-[0.25em] text-[#00A651] uppercase">MEDIA</span>
               </div>
-            </a>
+            </Link>
             <p className="text-[#00A651]/80 text-sm font-medium mb-2">
               A Complete AD Publicity
             </p>
@@ -136,13 +130,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
-                    onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                     className="text-gray-400 text-sm hover:text-[#00A651] transition-all duration-300 hover:pl-2 border-l-2 border-transparent hover:border-[#00A651] pl-0"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -154,13 +147,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
-                    onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
                     className="text-gray-400 text-sm hover:text-[#00A651] transition-all duration-300 hover:pl-2 border-l-2 border-transparent hover:border-[#00A651] pl-0"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

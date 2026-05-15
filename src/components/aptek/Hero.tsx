@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
@@ -64,17 +65,13 @@ export default function Hero() {
                 <MessageCircle size={16} />
                 Get Free Quote
               </a>
-              <a
-                href="#portfolio"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector('#portfolio')?.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <Link
+                href="/portfolio"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-gray-200 hover:border-[#00A651]/40 text-gray-700 hover:text-[#00A651] font-semibold text-sm sm:text-base rounded-full transition-all duration-300 hover:bg-[#00A651]/5"
               >
                 See Our Work
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
-              </a>
+              </Link>
             </motion.div>
           </div>
 

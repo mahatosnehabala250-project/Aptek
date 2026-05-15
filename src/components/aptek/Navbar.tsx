@@ -1,20 +1,23 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Clients', href: '#clients' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,14 +26,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleNavClick = (href: string) => {
-    setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <>
@@ -50,14 +45,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('#home');
-              }}
-              className="flex items-center gap-2"
-            >
+            <Link href="/" className="flex items-center gap-2">
               <div className="flex items-center">
                 <div className="w-8 h-8 md:w-9 md:h-9 mr-1.5 flex items-center justify-center">
                   <svg viewBox="0 0 40 40" className="w-full h-full">
@@ -80,24 +68,25 @@ export default function Navbar() {
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
-                  className="px-4 py-2 text-sm font-medium transition-colors duration-300 relative group text-gray-600 hover:text-[#00A651]"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#00A651] group-hover:w-full transition-all duration-300" />
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`px-4 py-2 text-sm font-medium transition-colors duration-300 relative group ${
+                      isActive ? 'text-[#00A651]' : 'text-gray-600 hover:text-[#00A651]'
+                    }`}
+                  >
+                    {link.label}
+                    <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#00A651] transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                  </Link>
+                );
+              })}
             </div>
 
             {/* CTA Button */}
@@ -166,22 +155,28 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
-                  className="w-full text-center py-4 text-lg font-medium text-gray-600 hover:text-[#00A651] transition-colors border-b border-gray-100"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+              {navLinks.map((link, i) => {
+                const isActive = pathname === link.href;
+                return (
+                  <motion.div
+                    key={link.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.08 }}
+                    className="w-full"
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block w-full text-center py-4 text-lg font-medium transition-colors border-b border-gray-100 ${
+                        isActive ? 'text-[#00A651]' : 'text-gray-600 hover:text-[#00A651]'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
               <motion.a
                 href="https://wa.me/919932138191?text=Hi%20APTEK%20MEDIA%2C%20I%20want%20to%20know%20about%20your%20advertising%20services."
                 target="_blank"

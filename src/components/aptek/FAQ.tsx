@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Link from 'next/link';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
@@ -170,12 +171,12 @@ export default function FAQ() {
           <p className="text-gray-500 text-sm md:text-base mb-4">
             Still not sure? Talk to us directly — no commitment, no pressure.
           </p>
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00A651] text-white font-semibold text-sm hover:bg-[#008C45] transition-colors duration-300 shadow-md hover:shadow-lg"
           >
             Get Your Free Quote Now
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

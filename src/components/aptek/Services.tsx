@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import {
   Megaphone,
@@ -171,8 +172,8 @@ export default function Services() {
                 </div>
 
                 {/* Explore Service link — always visible */}
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#00A651] hover:text-[#008C45] transition-colors duration-200 group/link"
                 >
                   <span>Explore Service</span>
@@ -180,7 +181,7 @@ export default function Services() {
                     size={15}
                     className="transition-transform duration-200 group-hover/link:translate-x-0.5"
                   />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}
