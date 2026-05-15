@@ -295,12 +295,12 @@ export default function Portfolio() {
                     }`}
                     onClick={() => setSelectedImage(item)}
                   >
-                    <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100">
-                      {/* Image with zoom on hover */}
+                    <div className="relative aspect-video rounded-xl overflow-hidden bg-[#111]">
+                      {/* Image — no crop, full clarity */}
                       <img
                         src={item.src}
                         alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                        className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
                         loading="lazy"
                       />
                       {/* Category badge - top right */}
