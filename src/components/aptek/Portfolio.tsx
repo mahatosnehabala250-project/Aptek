@@ -23,7 +23,7 @@ const portfolioItems = [
   },
   {
     id: 2,
-    src: '/images/portfolio-flex-printing.png',
+    src: '/images/portfolio-flex-printing.jpg',
     title: 'Large Format Flex Printing',
     category: 'Flex Printing',
     description: 'High-resolution large format flex printing for outdoor advertising with vivid color reproduction.',
