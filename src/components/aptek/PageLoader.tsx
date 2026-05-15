@@ -30,24 +30,11 @@ export default function PageLoader() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
               className="loader-logo-pulse"
             >
-              <div className="flex items-center gap-2">
-                <div className="w-12 h-12 flex items-center justify-center">
-                  <svg viewBox="0 0 40 40" className="w-full h-full">
-                    <defs>
-                      <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#00A651" />
-                        <stop offset="100%" stopColor="#00C462" />
-                      </linearGradient>
-                    </defs>
-                    <path d="M20 4L4 36h10l6-12 6 12h10L20 4z" fill="url(#loaderGrad)" />
-                    <path d="M20 14l4 8h-8l4-8z" fill="#8BC34A" opacity="0.6" />
-                  </svg>
-                </div>
-                <div className="flex flex-col leading-none">
-                  <span className="text-3xl font-black tracking-tight text-gray-900">APTEK</span>
-                  <span className="text-[11px] font-bold tracking-[0.25em] text-[#00A651] uppercase">MEDIA</span>
-                </div>
-              </div>
+              <img
+                src="/aptek-logo.png"
+                alt="APTEK MEDIA"
+                className="w-64 h-auto object-contain"
+              />
             </motion.div>
 
             {/* Loading Bar */}
